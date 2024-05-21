@@ -1,0 +1,6 @@
+services:
+  dockerized-dev-environment:
+    build: .
+    image: dockerized-dev-environment
+    container_name: dockerized-dev-environment
+    tty: true
