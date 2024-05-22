@@ -4,3 +4,7 @@ services:
     image: dockerized-dev-environment
     container_name: dockerized-dev-environment
     tty: true
+    volumes:
+      - type: bind
+        source: ${PWD}
+        target: /home/
