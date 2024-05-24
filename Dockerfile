@@ -11,3 +11,5 @@ RUN apk add --no-cache git
 RUN apk add --no-cache github-cli
 
 RUN apk add --no-cache gzip
+
+COPY .gitconfig /root/.gitconfig
