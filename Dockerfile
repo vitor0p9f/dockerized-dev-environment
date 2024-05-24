@@ -13,3 +13,7 @@ RUN apk add --no-cache github-cli
 RUN apk add --no-cache gzip
 
 COPY .gitconfig /root/.gitconfig
+
+# Neovim
+
+RUN apk add --no-cache neovim
