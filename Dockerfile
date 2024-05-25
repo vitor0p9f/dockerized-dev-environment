@@ -23,3 +23,5 @@ RUN apk add --no-cache neovim
 RUN apk add --no-cache openssh
 
 RUN apk add --no-cache openrc
+
+RUN rc-update add sshd
