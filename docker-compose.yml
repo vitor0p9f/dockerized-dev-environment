@@ -8,3 +8,11 @@ services:
       - type: bind
         source: ${PWD}
         target: /home/
+
+      - type: bind
+        source: ./.config/
+        target: /root/.config/
+
+      - type: bind
+        source: ${HOST_HOME_DIR}/.ssh/
+        target: /root/.ssh/
