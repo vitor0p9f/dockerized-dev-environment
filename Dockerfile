@@ -17,3 +17,9 @@ COPY .gitconfig /root/.gitconfig
 # Neovim
 
 RUN apk add --no-cache neovim
+
+# System
+
+RUN apk add --no-cache openssh
+
+RUN apk add --no-cache openrc
