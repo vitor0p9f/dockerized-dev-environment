@@ -1,3 +1,4 @@
 .gitconfig
 .config/gh
-.config/fish
+.config/fish/functions
+.config/fish/conf.d
