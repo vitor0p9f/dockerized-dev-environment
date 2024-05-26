@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+source ~/.asdf/asdf.fish # Add asdf to $PATH
+
 function setup
 	set_color brmagenta
     	echo "Installing asdf..."
@@ -13,7 +15,6 @@ function setup
 	echo "Generating symbolic link for completions..."
     	set_color normal
 
-	source ~/.asdf/asdf.fish
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 	set_color brmagenta
