@@ -16,4 +16,13 @@ function setup
 	source ~/.asdf/asdf.fish
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
+	set_color brmagenta
+    	echo "Installing Rust..."
+    	set_color normal
+
+    	asdf plugin-add rust
+    	asdf plugin-update rust
+    	asdf install rust latest
+    	sleep 1
+    	asdf global rust latest
 end
