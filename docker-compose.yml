@@ -16,3 +16,5 @@ services:
       - type: bind
         source: ${HOST_HOME_DIR}/.ssh/
         target: /root/.ssh/
+
+      - ./.asdf/:/root/.asdf/
