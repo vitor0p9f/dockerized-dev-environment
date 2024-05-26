@@ -1,5 +1,11 @@
 FROM alpine:3.20
 
+# Dependencies
+
+RUN apk add --no-cache curl # asdf dependencie
+
+RUN apk add --no-cache bash # asdf dependencie
+
 # Shell
 
 RUN apk add --no-cache fish
