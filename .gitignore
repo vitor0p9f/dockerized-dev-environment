@@ -2,3 +2,4 @@
 .config/gh
 .config/fish/functions
 .config/fish/conf.d
+.asdf/
