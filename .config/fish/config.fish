@@ -37,4 +37,13 @@ function setup
     	asdf install ruby latest
     	sleep 1
     	asdf global ruby latest
+
+	set_color brmagenta
+    	echo "Installing NodeJS..."
+    	set_color normal
+
+	asdf plugin-add nodejs
+	asdf plugin-update nodejs
+	asdf install nodejs latest
+	asdf global nodejs latest
 end
