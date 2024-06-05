@@ -21,6 +21,7 @@ The environment use `fish` as default shell.
   
   * Ruby
   * Rust
+  * NodeJS
 </details>
 
 * Neovim
@@ -45,7 +46,7 @@ The environment use `fish` as default shell.
 1. Clone this repository on your machine.
 2. Add the function below to your shell's config file.
 
-    <details open>
+    <details>
       <summary>Fish</summary>
       
       ```fish
@@ -175,7 +176,7 @@ The environment use `fish` as default shell.
       ```
     </details>
 
-    <details open>
+    <details>
       <summary>Bash</summary>
       
       ```bash
