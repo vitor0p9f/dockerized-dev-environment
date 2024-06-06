@@ -32,6 +32,8 @@ RUN apk add --no-cache github-cli
 
 RUN apk add --no-cache gzip
 
+RUN apk add --no-cache lazygit
+
 COPY .gitconfig /root/.gitconfig
 
 # Neovim
@@ -45,3 +47,13 @@ RUN apk add --no-cache openssh
 RUN apk add --no-cache openrc
 
 RUN rc-update add sshd
+
+# CLI
+
+RUN apk add --no-cache dust
+
+RUN apk add --no-cache bat
+
+RUN apk add --no-cache atuin
+
+RUN apk add --no-cache exa
