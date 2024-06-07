@@ -57,3 +57,5 @@ RUN apk add --no-cache bat
 RUN apk add --no-cache atuin
 
 RUN apk add --no-cache exa
+
+RUN apk add --no-cache zellij
