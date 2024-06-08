@@ -181,7 +181,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		printf "Building the container...\n"
       		set_color normal
       
-      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --build
+      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --build --force-recreate
       
       		set_color yellow
       		printf "Running the container...\n"
@@ -193,7 +193,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		printf "Stopping the container...\n"
       		set_color normal
       
-      		sudo docker stop dockerized-dev-environment
+      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml stop
       
       		set_color yellow
       		printf "Stopping Docker daemon...\n"
@@ -202,22 +202,16 @@ O ambiente utiliza o `fish` como o shell padrão.
       		sudo systemctl stop docker
       	case "remove"
       		set_color yellow
-      		printf "Stopping the container...\n"
+      		printf "Removing the container and the image...\n"
       		set_color normal
       
-      		sudo docker stop dockerized-dev-environment
+      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml down --rmi all
       
       		set_color yellow
-      		printf "Removing the container...\n"
+      		printf "Stopping Docker daemon...\n"
       		set_color normal
-      
-      		sudo docker rm dockerized-dev-environment
-      
-      		set_color yellow
-      		printf "Removing the image...\n"
-      		set_color normal
-      
-      		sudo docker rmi dockerized-dev-environment
+
+		      sudo systemctl stop docker
       	case "*"
       		printf "Usage:\tdevE COMMAND\n\n"
       
@@ -310,7 +304,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
           printf "${bright_yellow}Building the container...\n${normal}"
       
-          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --build
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --build --force-recreate
       
           printf "${bright_yellow}Running the container...\n${normal}"
       
@@ -320,7 +314,7 @@ O ambiente utiliza o `fish` como o shell padrão.
         "stop")
           printf "${bright_yellow}Stopping the container...\n${normal}"
       
-          sudo docker stop dockerized-dev-environment
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml stop
       
           printf "${bright_yellow}Stopping Docker daemon...\n${normal}"
       
@@ -328,17 +322,13 @@ O ambiente utiliza o `fish` como o shell padrão.
         ;;
       
         "remove")
-          printf "${bright_yellow}Stopping the container...\n${normal}"
+          printf "${bright_yellow}Removing the container and the image...\n${normal}"
       
-          sudo docker stop dockerized-dev-environment
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml down --rmi all
       
-          printf "${bright_yellow}Removing the container...\n${normal}"
+          printf "${bright_yellow}Stopping Docker daemon...\n${normal}"
       
-          sudo docker rm dockerized-dev-environment
-      
-          printf "${bright_yellow}Removing the image...\n${normal}"
-      
-          sudo docker rmi dockerized-dev-environment
+          sudo systemctl stop docker
         ;;
       
         *)
