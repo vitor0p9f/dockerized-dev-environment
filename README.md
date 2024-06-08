@@ -207,7 +207,7 @@ The environment use `fish` as default shell.
       		set_color yellow
       		printf "Stopping Docker daemon...\n"
       		set_color normal
-      
+
       		sudo systemctl stop docker
       	case "remove"
       		set_color yellow
@@ -220,7 +220,7 @@ The environment use `fish` as default shell.
       		printf "Stopping Docker daemon...\n"
       		set_color normal
 
-		      sudo systemctl stop docker
+      		sudo systemctl stop docker
       	case "*"
       		printf "Usage:\tdevE COMMAND\n\n"
       
@@ -323,7 +323,7 @@ The environment use `fish` as default shell.
         "stop")
           printf "${bright_yellow}Stopping the container...\n${normal}"
       
-      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml stop
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml stop
       
           printf "${bright_yellow}Stopping Docker daemon...\n${normal}"
       
@@ -364,9 +364,9 @@ The environment use `fish` as default shell.
 
     OBS: Close the terminal to apply the modifies on the shell's configuration file.
 
-3. Replace `< Repository path, without / >` with the repository's path.
+4. Replace `< Repository path, without / >` with the repository's path.
 
-4. Run `devE build` inside the desired directory to build the environment. This command will bind the host directory with the `/home/` directory inside the container.
+5. Run `devE build` inside the desired directory to build the environment. This command will bind the host directory with the `/home/` directory inside the container.
 
    OBS: `devE build` only needs to be executed once, or when it is necessary to force the construction of the container. Otherwise, use `devE run`.
 
