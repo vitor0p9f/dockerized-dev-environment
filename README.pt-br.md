@@ -211,7 +211,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		printf "Stopping Docker daemon...\n"
       		set_color normal
 
-		      sudo systemctl stop docker
+      		sudo systemctl stop docker
       	case "*"
       		printf "Usage:\tdevE COMMAND\n\n"
       
@@ -355,9 +355,9 @@ O ambiente utiliza o `fish` como o shell padrão.
 
     OBS: Feche o terminal para aplicar as modificações feitas no arquivo de configuração do shell.
 
-3. Substitua `< Repository path, without / >` pelo caminho do repositório.
+4. Substitua `< Repository path, without / >` pelo caminho do repositório.
 
-4. Execute `devE build` dentro do diretório desejado para construir o ambiente. Este comando irá vincular o diretório do host com o diretório `/home/` dentro do contêiner.
+5. Execute `devE build` dentro do diretório desejado para construir o ambiente. Este comando irá vincular o diretório do host com o diretório `/home/` dentro do contêiner.
 
    OBS: `devE build` precisa ser executado apenas uma vez, ou quando for necessário forçar a construção do contêiner. Caso contrário, utilize `devE run`.
 
