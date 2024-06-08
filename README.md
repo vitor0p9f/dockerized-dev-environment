@@ -1,3 +1,12 @@
+<div align = "center">
+  <p>This README is also available in the following languages:</p>
+  <br/>
+  
+  <a href = "https://github.com/vitor0p9f/dockerized-dev-environment/blob/main/README.pt-br.md">
+    <img src="https://img.shields.io/badge/Language-Portuguese Br-blue"/>
+  </a>
+</div>
+
 <div align="center">
   <h1>Dockerized Dev Environment</h1>
 </div>
