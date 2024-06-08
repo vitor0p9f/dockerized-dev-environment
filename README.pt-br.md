@@ -14,6 +14,7 @@ O ambiente utiliza o `fish` como o shell padrão.
   <summary>Git</summary>
   
   * GitHub CLI
+  * Lazygit
 </details>
 
 <details open>
@@ -24,6 +25,16 @@ O ambiente utiliza o `fish` como o shell padrão.
   * NodeJS
 </details>
 
+<details open>
+  <summary>CLI</summary>
+  
+  * Bat (`cat` como alias)
+  * Exa (`ls` como alias)
+  * Atuin
+  * Dust
+  * Zellij
+</details>
+
 * Neovim
 
 ## Mostruário
@@ -31,11 +42,55 @@ O ambiente utiliza o `fish` como o shell padrão.
 <table>
   <tr>
     <th>Neovim</th>
+    <th>Lazygit</th>
+    <th>Exa</th>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a">
         <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a" alt="Neovim screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/9a3ff43d-b143-40a0-8384-d9b7454f33df">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/9a3ff43d-b143-40a0-8384-d9b7454f33df" alt="Lazygit screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bf522782-0919-401e-93b3-23350647a1b2">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bf522782-0919-401e-93b3-23350647a1b2" alt="Exa screenshot"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>Bat</th>
+    <th>Dust</th>
+    <th>Atuin</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/9e39330b-84ad-423c-b746-9ce788ab46ed">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/9e39330b-84ad-423c-b746-9ce788ab46ed" alt="Bat screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/27714312-7ca4-4cd4-9245-c03740c66588">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/27714312-7ca4-4cd4-9245-c03740c66588" alt="Dust screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/d4cbb934-ab10-4e76-8a97-4f7d099b601b">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/d4cbb934-ab10-4e76-8a97-4f7d099b601b" alt="Atuin screenshot"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>Zellij</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad" alt="Zellij screenshot"/>
       </a>
     </td>
   </tr>
@@ -45,6 +100,7 @@ O ambiente utiliza o `fish` como o shell padrão.
 
 * Docker
 * Docker Compose
+* Alguma Nerd Font
 
 ## Como utilizar
 
