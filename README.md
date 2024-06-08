@@ -14,6 +14,7 @@ The environment use `fish` as default shell.
   <summary>Git</summary>
   
   * GitHub CLI
+  * Lazygit
 </details>
 
 <details open>
@@ -22,6 +23,16 @@ The environment use `fish` as default shell.
   * Ruby
   * Rust
   * NodeJS
+</details>
+
+<details open>
+  <summary>CLI</summary>
+  
+  * Bat (`cat` as an alias)
+  * Exa (`ls` as an alias)
+  * Atuin
+  * Dust
+  * Zellij
 </details>
 
 * Neovim
@@ -45,6 +56,7 @@ The environment use `fish` as default shell.
 
 * Docker
 * Docker Compose
+* Some Nerd Font
 
 ## How to use
 
