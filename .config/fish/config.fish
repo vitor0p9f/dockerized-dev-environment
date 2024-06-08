@@ -12,8 +12,10 @@ function setup
 	set_color brmagenta
     	echo "Installing asdf..."
     	set_color normal
-
+	
 	git clone https://github.com/asdf-vm/asdf.git /root/.asdf/ --branch v0.14.0
+
+	source ~/.asdf/asdf.fish # Add asdf to $PATH
 
 	set_color brmagenta
 	echo "Generating symbolic link for completions..."
