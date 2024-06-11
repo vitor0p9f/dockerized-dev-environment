@@ -4,3 +4,4 @@
 .config/fish/conf.d
 .config/atuin
 .asdf/
+.local/
