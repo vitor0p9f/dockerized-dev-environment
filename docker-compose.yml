@@ -18,3 +18,5 @@ services:
         target: /root/.ssh/
 
       - ./.asdf/:/root/.asdf/
+
+      - ./.local/:/root/.local/
