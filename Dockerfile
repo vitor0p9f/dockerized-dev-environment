@@ -59,3 +59,9 @@ RUN apk add --no-cache atuin
 RUN apk add --no-cache exa
 
 RUN apk add --no-cache zellij
+
+# Neovim
+
+RUN apk add --no-cache ripgrep # Telescope's dependency
+
+RUN apk add --no-cache fd # Telescope's dependency
