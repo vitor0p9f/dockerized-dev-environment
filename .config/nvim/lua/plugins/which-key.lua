@@ -22,6 +22,11 @@ return {
           x = {"<cmd>BufferClose<cr>","Close active tab"},
           p = {"<cmd>BufferPrevious<cr>","Move to the previous tab"},
           n = {"<cmd>BufferNext<cr>","Move to the next tab"},
+        },
+        n = {
+          name = "Neo-tree",
+          t = {"<cmd>Neotree toggle<cr>","Toggle"},
+          f = {"<cmd>Neotree focus<cr>","Focus"}
         }
       }
     })

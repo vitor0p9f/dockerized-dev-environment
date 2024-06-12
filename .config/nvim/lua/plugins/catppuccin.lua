@@ -7,7 +7,8 @@ return {
     require("catppuccin").setup({
       integrations = {
         barbar = true,
-        noice = true
+        noice = true,
+        neotree = true
       }
     })
 
