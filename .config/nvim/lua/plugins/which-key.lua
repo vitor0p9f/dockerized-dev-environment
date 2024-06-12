@@ -27,6 +27,12 @@ return {
           name = "Neo-tree",
           t = {"<cmd>Neotree toggle<cr>","Toggle"},
           f = {"<cmd>Neotree focus<cr>","Focus"}
+        },
+        h = {
+          name = "Hunk",
+          r = {"<cmd>Gitsigns reset_hunk<cr>","Reset"},
+          p = {"<cmd>Gitsigns preview_hunk<cr>","Preview"},
+          b = {"<cmd>Gitsigns toggle_current_line_blame<cr>","Toggle line blame"}
         }
       }
     })
