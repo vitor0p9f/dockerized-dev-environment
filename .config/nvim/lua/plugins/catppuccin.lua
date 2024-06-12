@@ -6,7 +6,8 @@ return {
 	config = function()
     require("catppuccin").setup({
       integrations = {
-        barbar = true
+        barbar = true,
+        noice = true
       }
     })
 
