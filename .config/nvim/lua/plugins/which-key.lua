@@ -33,8 +33,12 @@ return {
           r = {"<cmd>Gitsigns reset_hunk<cr>","Reset"},
           p = {"<cmd>Gitsigns preview_hunk<cr>","Preview"},
           b = {"<cmd>Gitsigns toggle_current_line_blame<cr>","Toggle line blame"}
+        },
+        l = {
+          name = "Lazygit",
+          r = {"<cmd>LazyGit<cr>","Run"}
         }
-      }
+      },
     })
   end
 }
