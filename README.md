@@ -21,6 +21,7 @@
 * [Showcase](#2)
 * [Requirements](#3)
 * [How to use](#4)
+* [Shortcuts](#5)
 
 ## <a id="1" />Tools
 
@@ -63,6 +64,8 @@ The environment use `fish` as default shell.
   * Lazygit
   * Catppuccin theme
   * Gitsigns
+  * Lazy.nvim
+  * Nvim-treesitter
 </details>
 
 ## <a id="2" />Showcase
@@ -75,8 +78,8 @@ The environment use `fish` as default shell.
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a">
-        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a" alt="Neovim screenshot"/>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bbd5ac56-b1ae-4118-aae9-191fad028006">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bbd5ac56-b1ae-4118-aae9-191fad028006" alt="Neovim screenshot"/>
       </a>
     </td>
     <td>
@@ -392,3 +395,35 @@ The environment use `fish` as default shell.
 6. Run `setup` inside the environment to configure it.
 
     OBS: `setup` only needs to be executed once, or when it is necessary to reconfigure the environment.
+
+## <a id="5" />Shortcuts
+
+In this section, you can find all the custom shortcuts used in Neovim. The `leader` key is the spacebar.
+
+<br>
+
+Find file using telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>f</kbd>
+
+Find recent files usign telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>r</kbd>
+
+Find a word inside a file using telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>w</kbd>
+
+Pin current tab - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>f</kbd>
+
+Close current tab - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>x</kbd>
+
+Move to the previous tab - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>p</kbd>
+
+Move to the next tab - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>n</kbd>
+
+Toggle neo-tree - <kbd>leader</kbd> + <kbd>n</kbd> + <kbd>t</kbd>
+
+Focus on neo-tree - <kbd>leader</kbd> + <kbd>n</kbd> + <kbd>f</kbd>
+
+Reset hunk under the cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>r</kbd>
+
+Preview hunk under the cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>p</kbd>
+
+Toggle git blame - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>b</kbd>
+
+Run Lazygit - <kbd>leader</kbd> + <kbd>l</kbd> + <kbd>r</kbd>
