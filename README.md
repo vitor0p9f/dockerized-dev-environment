@@ -2,7 +2,7 @@
   <p>This README is also available in the following languages:</p>
   <br/>
   
-  <a href = "https://github.com/vitor0p9f/dockerized-dev-environment/blob/main/README.pt-br.md">
+  <a href = "https://github.com/vitor0p9f/dockerized-dev-environment/blob/release/0.3.0/README.pt-br.md">
     <img src="https://img.shields.io/badge/Language-Portuguese Br-blue"/>
   </a>
 </div>
@@ -15,7 +15,14 @@
     This project aims to build a development environment inside a Docker container. The environment's tools are used daily by the project's author.
 </p>
 
-## Tools
+## Index
+
+* [Tools](#1)
+* [Showcase](#2)
+* [Requirements](#3)
+* [How to use](#4)
+
+## <a id="1" />Tools
 
 The environment use `fish` as default shell.
 
@@ -44,9 +51,21 @@ The environment use `fish` as default shell.
   * Zellij
 </details>
 
-* Neovim
+<details open>
+  <summary>Neovim</summary>
+  
+  * Telescope
+  * Noice
+  * Neo-tree
+  * Lualine
+  * Barbar
+  * Which Key
+  * Lazygit
+  * Catppuccin theme
+  * Gitsigns
+</details>
 
-## Showcase
+## <a id="2" />Showcase
 
 <table>
   <tr>
@@ -105,13 +124,13 @@ The environment use `fish` as default shell.
   </tr>
 </table>
 
-## Requirements
+## <a id="3" />Requirements
 
 * Docker
 * Docker Compose
 * Some Nerd Font
 
-## How to use
+## <a id="4" />How to use
 
 1. Clone this repository on your machine.
 2. Add the function below to your shell's config file.
