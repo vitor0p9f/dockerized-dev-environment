@@ -386,7 +386,7 @@ The environment use `fish` as default shell.
 
     OBS: Close the terminal to apply the modifies on the shell's configuration file.
 
-4. Replace `< Repository path, without / >` with the repository's path.
+4. Replace `< The path where the repository was cloned, without '/' at the end. Example: Documents/GitHub >` with the repository's path.
 
 5. Run `devE build` inside the desired directory to build the environment. This command will bind the host directory with the `/home/` directory inside the container.
 
