@@ -145,7 +145,7 @@ The environment use `fish` as default shell.
       function devE
       # Repository path
       
-      set repo_path "$HOME/< Repository path, without / >"
+      set repo_path "$HOME/< The path where the repository was cloned, without '/' at the end. Example: Documents/GitHub >"
       
       # Generating env file
       
@@ -274,7 +274,7 @@ The environment use `fish` as default shell.
       
       # Repository path
       
-      repo_path="$HOME/< Repository path, without / >"
+      repo_path="$HOME/< The path where the repository was cloned, without '/' at the end. Example: Documents/GitHub >"
       
       # Generating env file
       
