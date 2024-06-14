@@ -377,7 +377,7 @@ O ambiente utiliza o `fish` como o shell padrão.
 
     OBS: Feche o terminal para aplicar as modificações feitas no arquivo de configuração do shell.
 
-4. Substitua `< Repository path, without / >` pelo caminho do repositório.
+4. Substitua `< Caminho onde o repositório foi clonado, sem '/' no final. Exemplo: Documents/GitHub >` pelo caminho do repositório.
 
 5. Execute `devE build` dentro do diretório desejado para construir o ambiente. Este comando irá vincular o diretório do host com o diretório `/home/` dentro do contêiner.
 
