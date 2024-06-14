@@ -6,7 +6,15 @@
     Este projeto visa construir um ambiente de desenvolvimento em um contêiner Docker. As ferramentas utilizadas no ambiente também são utilizadas no dia a dia do autor do projeto.
 </p>
 
-## Ferramentas
+## Index
+
+* [Ferramentas](#1)
+* [Mostruário](#2)
+* [Requisitos](#3)
+* [Como utilizar](#4)
+* [Atalhos](#5)
+
+## <a id="1" />Ferramentas
 
 O ambiente utiliza o `fish` como o shell padrão.
 
@@ -28,16 +36,30 @@ O ambiente utiliza o `fish` como o shell padrão.
 <details open>
   <summary>CLI</summary>
   
-  * Bat (`cat` como alias)
-  * Exa (`ls` como alias)
+  * Bat (`cat` as an alias)
+  * Exa (`ls` as an alias)
   * Atuin
   * Dust
   * Zellij
 </details>
 
-* Neovim
+<details open>
+  <summary>Neovim</summary>
+  
+  * Telescope
+  * Noice
+  * Neo-tree
+  * Lualine
+  * Barbar
+  * Which Key
+  * Lazygit
+  * Catppuccin theme
+  * Gitsigns
+  * Lazy.nvim
+  * Nvim-treesitter
+</details>
 
-## Mostruário
+## <a id="2" />Mostruário
 
 <table>
   <tr>
@@ -47,8 +69,8 @@ O ambiente utiliza o `fish` como o shell padrão.
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a">
-        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/1e21933c-5030-436a-88d2-741bb3734a5a" alt="Neovim screenshot"/>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bbd5ac56-b1ae-4118-aae9-191fad028006">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/bbd5ac56-b1ae-4118-aae9-191fad028006" alt="Neovim screenshot"/>
       </a>
     </td>
     <td>
@@ -96,13 +118,13 @@ O ambiente utiliza o `fish` como o shell padrão.
   </tr>
 </table>
 
-## Requisitos
+## <a id="3" />Requisitos
 
 * Docker
 * Docker Compose
 * Alguma Nerd Font
 
-## Como utilizar
+## <a id="4" />Como utilizar
 
 1. Clone o repositório em sua máquina.
 2. Adicione a função abaixo no arquivo de configuração de seu shell.
@@ -114,7 +136,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       function devE
       # Repository path
       
-      set repo_path "$HOME/< Repository path, without / >"
+      set repo_path "$HOME/< Caminho onde o repositório foi clonado, sem '/' no final. Exemplo: Documents/GitHub >"
       
       # Generating env file
       
@@ -243,7 +265,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
       # Repository path
       
-      repo_path="$HOME/< Repository path, without / >"
+      repo_path="$HOME/< Caminho onde o repositório foi clonado, sem '/' no final. Exemplo: Documents/GitHub >"
       
       # Generating env file
       
@@ -364,3 +386,35 @@ O ambiente utiliza o `fish` como o shell padrão.
 6. Dentro do ambiente, execute `setup` para configurá-lo.
 
     OBS: `setup` precisa ser executado apenas uma vez, ou quando for necessário reconfigurar o ambiente.
+
+## <a id="5" />Atalhos
+
+Nesta seção, você poderá encontrar todos os atalhos customizados utilizados no Neovim. A tecla `leader` é a barra de espaço.
+
+<br>
+
+Buscar arquivos utilizando o telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>f</kbd>
+
+Buscar arquivos abertos recentemente usando o telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>r</kbd>
+
+Buscar uma palavra dentro de um arquivo usando o telescope - <kbd>leader</kbd> + <kbd>f</kbd> + <kbd>w</kbd>
+
+Fixar a aba atual - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>f</kbd>
+
+Fechar a aba atual - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>x</kbd>
+
+Mover para a aba anterior - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>p</kbd>
+
+Mover para a próxima aba - <kbd>leader</kbd> + <kbd>t</kbd> + <kbd>n</kbd>
+
+Mostrar/Esconder a neo-tree - <kbd>leader</kbd> + <kbd>n</kbd> + <kbd>t</kbd>
+
+Focar na neo-tree - <kbd>leader</kbd> + <kbd>n</kbd> + <kbd>f</kbd>
+
+Resetar hunk sob o cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>r</kbd>
+
+Visualizar hunk sob o cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>p</kbd>
+
+Mostrar/Esconder o git blame - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>b</kbd>
+
+Executar o Lazygit - <kbd>leader</kbd> + <kbd>l</kbd> + <kbd>r</kbd>
