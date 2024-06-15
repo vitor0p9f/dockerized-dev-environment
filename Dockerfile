@@ -6,6 +6,16 @@ RUN apk add --no-cache curl # asdf dependency
 
 RUN apk add --no-cache bash # asdf dependency
 
+RUN apk add --no-cache build-base # asdf erlang dependency
+
+RUN apk add --no-cache openssl-dev # asdf erlang dependency
+
+RUN apk add --no-cache automake # asdf erlang dependency
+
+RUN apk add --no-cache autoconf # asdf erlang dependency
+
+RUN apk add --no-cache ncurses-dev # asdf erlang dependency
+
 # Shell
 
 RUN apk add --no-cache fish
