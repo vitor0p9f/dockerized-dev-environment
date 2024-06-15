@@ -65,3 +65,7 @@ RUN apk add --no-cache zellij
 RUN apk add --no-cache ripgrep # Telescope's dependency
 
 RUN apk add --no-cache fd # Telescope's dependency
+
+# Programming languages
+
+RUN apk add --no-cache nodejs npm
