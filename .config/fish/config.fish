@@ -22,4 +22,14 @@ function setup
   set_color normal
 
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+
+  set_color brmagenta
+  echo "Installing erlang..."
+  set_color normal
+
+  asdf plugin-add erlang
+  asdf plugin-update erlang
+  asdf install erlang latest
+  asdf global erlang latest
+
 end
