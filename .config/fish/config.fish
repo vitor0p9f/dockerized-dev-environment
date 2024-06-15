@@ -22,25 +22,4 @@ function setup
   set_color normal
 
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
-
-	set_color brmagenta
-  echo "Installing Rust..."
-  set_color normal
-
-  asdf plugin-add rust
-  asdf plugin-update rust
-  asdf install rust latest
-  sleep 1
-  asdf global rust latest
-
-	set_color brmagenta
-  echo "Installing Ruby + YJIT..."
-  set_color normal
-
-  set RUBY_CONFIGURE_OPTS --enable-yjit
-  asdf plugin-add ruby
-  asdf plugin-update ruby
-  asdf install ruby latest
-  sleep 1
-  asdf global ruby latest
 end
