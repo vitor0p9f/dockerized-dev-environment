@@ -67,3 +67,7 @@ RUN apk add --no-cache fd # Telescope's dependency
 # Programming languages
 
 RUN apk add --no-cache nodejs npm
+
+# asdf
+
+COPY .tool-versions /root/.tool-versions
