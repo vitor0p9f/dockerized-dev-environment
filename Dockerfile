@@ -6,20 +6,6 @@ RUN apk add --no-cache curl # asdf dependency
 
 RUN apk add --no-cache bash # asdf dependency
 
-RUN apk add --no-cache linux-headers # asdf's ruby-builder dependency
-
-RUN apk add --no-cache openssl-dev # asdf's ruby-builder dependency
-
-RUN apk add --no-cache yaml-dev # asdf's ruby-builder dependency
-
-RUN apk add --no-cache make # asdf's ruby-builder dependency
-
-RUN apk add --no-cache gcc # asdf's ruby-builder dependency
-
-RUN apk add --no-cache zlib-dev # asdf's ruby-builder dependency
-
-RUN apk add --no-cache musl-dev # asdf's ruby-builder dependency
-
 # Shell
 
 RUN apk add --no-cache fish
