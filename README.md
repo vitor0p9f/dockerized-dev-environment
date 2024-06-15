@@ -39,7 +39,6 @@ The environment use `fish` as default shell.
   
   * Ruby
   * Rust
-  * NodeJS
 </details>
 
 <details open>
@@ -67,6 +66,9 @@ The environment use `fish` as default shell.
   * Lazy.nvim
   * Nvim-treesitter
 </details>
+
+* NodeJS
+* NPM
 
 ## <a id="2" />Showcase
 
