@@ -32,4 +32,12 @@ function setup
   asdf install erlang latest
   asdf global erlang latest
 
+  set_color brmagenta
+  echo "Installing elixir..."
+  set_color normal
+
+  asdf plugin-add elixir
+  asdf plugin-update elixir
+  asdf install elixir latest
+  asdf global elixir latest
 end
