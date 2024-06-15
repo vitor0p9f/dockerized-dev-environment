@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [0.3.1] - 2024-06-15
+
+### Added
+
+* NodeJs
+* NPM
+
+### Changed
+
+* Install NodeJS and NPM using Alpine instead of asdf.
+
+### Fixed
+
+* NodeJS and NPM does not work.
+
 ## [0.3.0] - 2024-06-14
 
 ### Added
