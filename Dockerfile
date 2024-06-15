@@ -16,6 +16,8 @@ RUN apk add --no-cache autoconf # asdf erlang dependency
 
 RUN apk add --no-cache ncurses-dev # asdf erlang dependency
 
+RUN apk add --no-cache unzip # asdf elixir dependency
+
 # Shell
 
 RUN apk add --no-cache fish
