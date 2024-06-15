@@ -4,7 +4,7 @@
 
 ### Added
 
-* NodeJs
+* NodeJS
 * NPM
 
 ### Changed
