@@ -3,5 +3,6 @@
 .config/fish/functions
 .config/fish/conf.d
 .config/atuin
+.config/lazygit
 .asdf/
 .local/
