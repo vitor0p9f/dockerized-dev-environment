@@ -8,7 +8,6 @@ return {
         null_ls.builtins.formatting.mix,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.credo
       },
     })
   end
