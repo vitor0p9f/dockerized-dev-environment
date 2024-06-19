@@ -7,7 +7,7 @@ return {
   end,
   config = function()
     local wk = require("which-key")
-    
+
     wk.register({
       ["<leader>"] ={
         f = {
@@ -37,8 +37,13 @@ return {
         l = {
           name = "Lazygit",
           r = {"<cmd>LazyGit<cr>","Run"}
+        },
+        d = {
+          name = "Diagnostics",
+				  t = { "<cmd>Trouble diagnostics toggle<cr>", "Toggle trouble" },
+				  b = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Show buffer diagnostics" },
         }
-      },
+      }
     })
   end
 }
