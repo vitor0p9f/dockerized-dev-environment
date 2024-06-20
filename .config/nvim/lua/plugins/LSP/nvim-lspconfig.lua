@@ -2,13 +2,16 @@ return {
 	"neovim/nvim-lspconfig",
   config = function()
 		local lspconfig = require("lspconfig")
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     lspconfig.elixirls.setup({
+      capabilities = capabilities,
       cmd = { "/root/.local/share/nvim/mason/packages/elixir-ls/language_server.sh" },
       root_dir = vim.loop.cwd
     })
 
     lspconfig.tsserver.setup{
+      capabilities = capabilities,
       init_options = {
         plugins = {
           {
@@ -26,9 +29,10 @@ return {
     }
 
     lspconfig.lua_ls.setup {
+      capabilities = capabilities,
       on_init = function(client)
         local path = client.workspace_folders[1].name
-        
+
         if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
           return
         end
