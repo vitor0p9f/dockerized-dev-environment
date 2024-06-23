@@ -17,6 +17,14 @@ services:
         source: ${HOST_HOME_DIR}/.ssh/
         target: /root/.ssh/
 
+      - type: bind
+        source: ./.gitconfig
+        target: /root/.gitconfig
+
+      - type: bind
+        source: ./.tool-versions
+        target: /root/.tool-versions
+
       - ./.asdf/:/root/.asdf/
 
       - ./.local/:/root/.local/

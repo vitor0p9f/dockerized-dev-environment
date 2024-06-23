@@ -32,8 +32,6 @@ RUN apk add --no-cache gzip
 
 RUN apk add --no-cache lazygit
 
-COPY .gitconfig /root/.gitconfig
-
 # Neovim
 
 RUN apk add --no-cache neovim
@@ -67,7 +65,3 @@ RUN apk add --no-cache fd # Telescope's dependency
 # Programming languages
 
 RUN apk add --no-cache nodejs npm
-
-# asdf
-
-COPY .tool-versions /root/.tool-versions
