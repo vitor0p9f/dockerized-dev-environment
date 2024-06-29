@@ -46,6 +46,7 @@ return {
 					name = "Buffer",
 					d = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Diagnostics" },
 					f = { vim.lsp.buf.format, "Format" },
+					a = { vim.lsp.buf.code_action, "Show code actions for the line under the cursor" },
 				},
 			},
 		})
