@@ -57,5 +57,19 @@ return {
 		lspconfig.dockerls.setup({
 			capabilities = capabilities,
 		})
+
+		lspconfig.nextls.setup({
+			capabilities = capabilities,
+			cmd = { "/root/.local/share/nvim/mason/packages/nextls/next_ls_linux_amd64", "--stdio" },
+			root_dir = vim.loop.cwd,
+			init_options = {
+				extensions = {
+					credo = { enable = true },
+				},
+				experimental = {
+					completions = { enable = true },
+				},
+			},
+		})
 	end,
 }
