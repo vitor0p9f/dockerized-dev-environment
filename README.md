@@ -2,7 +2,7 @@
   <p>This README is also available in the following languages:</p>
   <br/>
   
-  <a href = "https://github.com/vitor0p9f/dockerized-dev-environment/blob/release/0.3.1/README.pt-br.md">
+  <a href = "https://github.com/vitor0p9f/dockerized-dev-environment/blob/release/0.4.0/README.pt-br.md">
     <img src="https://img.shields.io/badge/Language-Portuguese Br-blue"/>
   </a>
 </div>
@@ -40,8 +40,8 @@ The environment use `fish` as default shell.
 <details open>
   <summary>asdf</summary>
   
-  * Ruby
-  * Rust
+  * Elixir
+  * Erlang
 </details>
 
 <details open>
@@ -68,6 +68,17 @@ The environment use `fish` as default shell.
   * Gitsigns
   * Lazy.nvim
   * Nvim-treesitter
+  * Trouble
+  * Mason
+  * Nvim-lspconfig
+  * None-ls
+  * Mason-null-ls
+  * Mason-lspconfig
+  * Luasnip
+  * Telescope-ui-select
+  * Nvim-cmp-lsp
+  * Nvim-cmp
+  * Cmp-luasnip
 </details>
 
 ## <a id="2" />Showcase
