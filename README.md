@@ -185,7 +185,7 @@ The environment use `fish` as default shell.
       		email = $git_email
       
       	[safe]
-      		directory = /home
+      		directory = *
       
       	[core]
       		editor = nvim
@@ -314,7 +314,7 @@ The environment use `fish` as default shell.
       		email = ${git_email}
       
       	[safe]
-      		directory = /home
+      		directory = *
       
       	[core]
       		editor = nvim
