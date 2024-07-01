@@ -17,68 +17,68 @@
 
 ## Index
 
-* [Tools](#1)
-* [Showcase](#2)
-* [Requirements](#3)
-* [How to use](#4)
-* [Shortcuts](#5)
+- [Tools](#1)
+- [Showcase](#2)
+- [Requirements](#3)
+- [How to use](#4)
+- [Shortcuts](#5)
 
 ## <a id="1" />Tools
 
 The environment use `fish` as default shell.
 
-* NodeJS
-* NPM
+- NodeJS
+- NPM
 
 <details open>
   <summary>Git</summary>
   
-  * GitHub CLI
-  * Lazygit
+  - GitHub CLI
+  - Lazygit
 </details>
 
 <details open>
   <summary>asdf</summary>
   
-  * Elixir
-  * Erlang
+  - Elixir
+  - Erlang
 </details>
 
 <details open>
   <summary>CLI</summary>
   
-  * Bat (`cat` as an alias)
-  * Exa (`ls` as an alias)
-  * Atuin
-  * Dust
-  * Zellij
+  - Bat (`cat` as an alias)
+  - Exa (`ls` as an alias)
+  - Atuin
+  - Dust
+  - Zellij
 </details>
 
 <details open>
   <summary>Neovim</summary>
   
-  * Telescope
-  * Noice
-  * Neo-tree
-  * Lualine
-  * Barbar
-  * Which Key
-  * Lazygit
-  * Catppuccin theme
-  * Gitsigns
-  * Lazy.nvim
-  * Nvim-treesitter
-  * Trouble
-  * Mason
-  * Nvim-lspconfig
-  * None-ls
-  * Mason-null-ls
-  * Mason-lspconfig
-  * Luasnip
-  * Telescope-ui-select
-  * Nvim-cmp-lsp
-  * Nvim-cmp
-  * Cmp-luasnip
+  - Telescope
+  - Noice
+  - Neo-tree
+  - Lualine
+  - Barbar
+  - Which Key
+  - Lazygit
+  - Catppuccin theme
+  - Gitsigns
+  - Lazy.nvim
+  - Nvim-treesitter
+  - Trouble
+  - Mason
+  - Nvim-lspconfig
+  - None-ls
+  - Mason-null-ls
+  - Mason-lspconfig
+  - Luasnip
+  - Telescope-ui-select
+  - Nvim-cmp-lsp
+  - Nvim-cmp
+  - Cmp-luasnip
 </details>
 
 ## <a id="2" />Showcase
@@ -211,7 +211,7 @@ The environment use `fish` as default shell.
       		printf "Running the container...\n"
       		set_color normal
       
-      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d
+      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --force-recreate
       
       		sudo docker exec -it -w /home/ dockerized-dev-environment fish
       	case "build"
@@ -336,7 +336,7 @@ The environment use `fish` as default shell.
       
           printf "${bright_yellow}Running the container...\n${normal}"
       
-          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --force-recreate
       
           sudo docker exec -it -w /home/ dockerized-dev-environment fish
         ;;
@@ -440,3 +440,11 @@ Preview hunk under the cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>p</kbd>
 Toggle git blame - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>b</kbd>
 
 Run Lazygit - <kbd>leader</kbd> + <kbd>l</kbd> + <kbd>r</kbd>
+
+Toggle trouble - <kbd>leader</kbd> + <kbd>d</kbd> + <kbd>t</kbd>
+
+Show diagnostics for the current buffer - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>d</kbd>
+
+Format the current buffer - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>f</kbd>
+
+Show code actions for the line under the cursor - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>a</kbd>
