@@ -22,6 +22,7 @@
 - [Requirements](#3)
 - [How to use](#4)
 - [Shortcuts](#5)
+- [Remarks](#6)
 
 ## <a id="1" />Tools
 
@@ -470,3 +471,27 @@ Show diagnostics for the current buffer - <kbd>leader</kbd> + <kbd>b</kbd> + <kb
 Format the current buffer - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>f</kbd>
 
 Show code actions for the line under the cursor - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>a</kbd>
+
+## <a id="6" />Remarks
+
+### LSP and autocomplete
+
+The present and configured LSP servers are:
+
+- `elixirls` and `nextls` for Elixir programming language.
+- `tsserver` for JavaScript and Typescript programming language.
+- `lua_ls` for Lua programming language.
+- `css_variables` and `cssls` for CSS style sheet language.
+- `dockerls` for Dockerfile.
+
+To add a new LSP server, open the Neovim and use the [Mason](https://github.com/williamboman/mason.nvim) plugin.
+
+To configure the LSP server, check the available servers and their configurations on the [Server Configurations](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) page and paste the configuration inside the `.config/nvim/lua/plugins/LSP/nvim-lspconfig.lua` file.
+
+Autocomplete is available only for the languages or file types with an LSP server installed and configured.
+
+To add completions for a programming language or file type whitout configure a LSP server, see the [Built-In sources](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration on `.config/nvim/lua/plugins/LSP/none-ls.lua`.
+
+### Diagnostics
+
+### Formating
