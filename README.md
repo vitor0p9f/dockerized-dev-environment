@@ -130,11 +130,33 @@ The environment use `fish` as default shell.
   </tr>
   <tr>
     <th>Zellij</th>
+    <th>Autocomplete</th>
+    <th>Code actions</th>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad">
         <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad" alt="Zellij screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/6f5d8212-b6ea-48bd-bb40-19f1a0951dc8">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/6f5d8212-b6ea-48bd-bb40-19f1a0951dc8" alt="Autocomplete in Neovim screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a31aae42-fe21-4e97-b510-1a6f8562181f">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a31aae42-fe21-4e97-b510-1a6f8562181f" alt="Code actions in Neovim screenshot"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>LSP</th>
+  </tr>
+  <tr>
+     <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a3784757-5cd5-46ee-8a39-bb31eea4d026">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a3784757-5cd5-46ee-8a39-bb31eea4d026" alt="LSP in Neovim screenshot"/>
       </a>
     </td>
   </tr>
