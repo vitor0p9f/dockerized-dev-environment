@@ -8,55 +8,68 @@
 
 ## Index
 
-* [Ferramentas](#1)
-* [Mostruário](#2)
-* [Requisitos](#3)
-* [Como utilizar](#4)
-* [Atalhos](#5)
+- [Ferramentas](#1)
+- [Mostruário](#2)
+- [Requisitos](#3)
+- [Como utilizar](#4)
+- [Atalhos](#5)
 
 ## <a id="1" />Ferramentas
 
 O ambiente utiliza o `fish` como o shell padrão.
 
+- NodeJS
+- NPM
+
 <details open>
   <summary>Git</summary>
   
-  * GitHub CLI
-  * Lazygit
+  - GitHub CLI
+  - Lazygit
 </details>
 
 <details open>
   <summary>asdf</summary>
   
-  * Ruby
-  * Rust
-  * NodeJS
+  - Elixir
+  - Erlang
 </details>
 
 <details open>
   <summary>CLI</summary>
   
-  * Bat (`cat` as an alias)
-  * Exa (`ls` as an alias)
-  * Atuin
-  * Dust
-  * Zellij
+  - Bat (`cat` como apelido)
+  - Exa (`ls` como apelido)
+  - Atuin
+  - Dust
+  - Zellij
 </details>
 
 <details open>
   <summary>Neovim</summary>
   
-  * Telescope
-  * Noice
-  * Neo-tree
-  * Lualine
-  * Barbar
-  * Which Key
-  * Lazygit
-  * Catppuccin theme
-  * Gitsigns
-  * Lazy.nvim
-  * Nvim-treesitter
+  - Telescope
+  - Noice
+  - Neo-tree
+  - Lualine
+  - Barbar
+  - Which Key
+  - Lazygit
+  - Catppuccin theme
+  - Gitsigns
+  - Lazy.nvim
+  - Nvim-treesitter
+  - Trouble
+  - Mason
+  - Nvim-lspconfig
+  - None-ls
+  - Mason-null-ls
+  - Mason-lspconfig
+  - Luasnip
+  - Telescope-ui-select
+  - Nvim-cmp-lsp
+  - Nvim-cmp
+  - Cmp-luasnip
 </details>
 
 ## <a id="2" />Mostruário
@@ -108,11 +121,33 @@ O ambiente utiliza o `fish` como o shell padrão.
   </tr>
   <tr>
     <th>Zellij</th>
+    <th>Autocomplete</th>
+    <th>Code actions</th>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad">
         <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/368f5ce5-34c3-48d2-862c-f40fab507bad" alt="Zellij screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/6f5d8212-b6ea-48bd-bb40-19f1a0951dc8">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/6f5d8212-b6ea-48bd-bb40-19f1a0951dc8" alt="Autocomplete in Neovim screenshot"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a31aae42-fe21-4e97-b510-1a6f8562181f">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a31aae42-fe21-4e97-b510-1a6f8562181f" alt="Code actions in Neovim screenshot"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>LSP</th>
+  </tr>
+  <tr>
+     <td>
+      <a href="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a3784757-5cd5-46ee-8a39-bb31eea4d026">
+        <img src="https://github.com/vitor0p9f/dockerized-dev-environment/assets/153991573/a3784757-5cd5-46ee-8a39-bb31eea4d026" alt="LSP in Neovim screenshot"/>
       </a>
     </td>
   </tr>
@@ -136,7 +171,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       function devE
       # Repository path
       
-      set repo_path "$HOME/< Caminho onde o repositório foi clonado, sem '/' no final. Exemplo: Documents/GitHub >"
+      set repo_path "$HOME/< The path where the repository was cloned, without '/' at the end. Example: Documents/GitHub >"
       
       # Generating env file
       
@@ -163,7 +198,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		email = $git_email
       
       	[safe]
-      		directory = /home
+      		directory = *
       
       	[core]
       		editor = nvim
@@ -189,7 +224,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		printf "Running the container...\n"
       		set_color normal
       
-      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d
+      		sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --force-recreate
       
       		sudo docker exec -it -w /home/ dockerized-dev-environment fish
       	case "build"
@@ -220,7 +255,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		set_color yellow
       		printf "Stopping Docker daemon...\n"
       		set_color normal
-      
+
       		sudo systemctl stop docker
       	case "remove"
       		set_color yellow
@@ -265,7 +300,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
       # Repository path
       
-      repo_path="$HOME/< Caminho onde o repositório foi clonado, sem '/' no final. Exemplo: Documents/GitHub >"
+      repo_path="$HOME/< The path where the repository was cloned, without '/' at the end. Example: Documents/GitHub >"
       
       # Generating env file
       
@@ -292,7 +327,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       		email = ${git_email}
       
       	[safe]
-      		directory = /home
+      		directory = *
       
       	[core]
       		editor = nvim
@@ -314,7 +349,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
           printf "${bright_yellow}Running the container...\n${normal}"
       
-          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d
+          sudo docker-compose -f $repo_path/dockerized-dev-environment/docker-compose.yml --env-file $HOME/.dev-environment.env up -d --force-recreate
       
           sudo docker exec -it -w /home/ dockerized-dev-environment fish
         ;;
@@ -418,3 +453,11 @@ Visualizar hunk sob o cursor - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>p</kbd>
 Mostrar/Esconder o git blame - <kbd>leader</kbd> + <kbd>h</kbd> + <kbd>b</kbd>
 
 Executar o Lazygit - <kbd>leader</kbd> + <kbd>l</kbd> + <kbd>r</kbd>
+
+Mostrar/Esconder o trouble - <kbd>leader</kbd> + <kbd>d</kbd> + <kbd>t</kbd>
+
+Mostrar diagnósticos para o buffer atual - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>d</kbd>
+
+Formatar o buffer atual - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>f</kbd>
+
+Mostrar ações de código para a linha abaixo do cursor - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>a</kbd>
