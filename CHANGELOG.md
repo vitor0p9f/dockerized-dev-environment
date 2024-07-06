@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## [0.4.0] - 2024-07-06
+
+### Added
+
+Add Elixir and Erlang using asdf.
+
+New Neovim plugins:
+
+- Mason
+- None-ls
+- Mason-lspconfig
+- Mason-null-ls
+- Nvim-lspconfig
+- Telescope-ui-select
+- Trouble
+- Cmp-luasnip
+- Luasnip
+- Nvim-cmp-lsp
+- Nvim-cmp
+
+Neovim suport for LSP servers:
+
+- `elixirls`
+- `tsserver`
+- `lua_ls`
+- `dockerls`
+- `nextls`
+- `css_variables`
+- `cssls`
+
+Neovim autocomplete tools:
+
+- `luasnip`
+
+Neovim autocomplete and code actions using LSP.
+
+Neovim formatting tools:
+
+- `mix`
+- `prettier`
+- `stylua`
+- `surface`
+
+Neovim diagnostic tools:
+
+- `commitlint`
+- `hadolint`
+- `markdownlint`
+
+### Changed
+
+* Remove Ruby and Rust.
+* Change the safe directory from /home to * in the `.gitconfig` file.
+
 ## [0.3.1] - 2024-06-15
 
 ### Added
