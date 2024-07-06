@@ -490,8 +490,24 @@ To configure the LSP server, check the available servers and their configuration
 
 Autocomplete is available only for the languages or file types with an LSP server installed and configured.
 
-To add completions for a programming language or file type whitout configure a LSP server, see the [Built-In sources](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration on `.config/nvim/lua/plugins/LSP/none-ls.lua`.
+To add completions for a programming language or file type whitout configure a LSP server, see the [Built-In sources](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
 
 ### Diagnostics
 
-### Formating
+The present and configured diagnostics tools are:
+
+- `commitlint` for commit messages.
+- `hadolint` for Dockerfile.
+- `markdownlint` for Markdown.
+
+To add a new dignostic tool, see the [Built-In sources for diagnostics](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#diagnostics) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
+
+### Formatting
+
+The present and configured formatting tools are:
+
+- `mix` and `surface` for Elixir files.
+- `prettier` for Javascript, Typescript, Vue, CSS, SCSS, LESS, HTML, JSON, JSONC, YAML, Markdown, Markdown.mdx, Graphql, Handlebars, Svelte, and Astro files.
+- `stylua` for Lua files.
+
+To add a new dignostic tool, see the [Built-In sources for formatting](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#formatting) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
