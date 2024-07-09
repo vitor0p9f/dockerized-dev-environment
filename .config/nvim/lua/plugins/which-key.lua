@@ -58,6 +58,10 @@ return {
 						x = { bm.bookmark_toggle, "Delete all bookmarks from current buffer" },
 						l = { bm.bookmark_list, "Show bookmarks list" },
 					},
+					i = {
+						name = "Icons/Symbols",
+						p = { "<cmd>IconPickerNormal<cr>", "Pick icons or symbols" },
+					},
 				},
 			},
 		})
