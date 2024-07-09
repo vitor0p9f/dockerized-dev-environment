@@ -7,6 +7,7 @@ return {
 	end,
 	config = function()
 		local wk = require("which-key")
+		local bm = require("bookmarks")
 
 		wk.register({
 			["<leader>"] = {
@@ -47,6 +48,16 @@ return {
 					d = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Diagnostics" },
 					f = { vim.lsp.buf.format, "Format" },
 					a = { vim.lsp.buf.code_action, "Show code actions for the line under the cursor" },
+				},
+				u = {
+					name = "Utils",
+					b = {
+						name = "Bookmarks",
+						t = { bm.bookmark_toggle, "Toggle bookmark" },
+						a = { bm.bookmark_ann, "Annotate bookmark" },
+						x = { bm.bookmark_toggle, "Delete all bookmarks from current buffer" },
+						l = { bm.bookmark_list, "Show bookmarks list" },
+					},
 				},
 			},
 		})
