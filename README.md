@@ -80,6 +80,10 @@ The environment use `fish` as default shell.
   - Nvim-cmp-lsp
   - Nvim-cmp
   - Cmp-luasnip
+  - Multicursors
+  - Bookmarks
+  - Nvim-highlight-colors
+  - Icon-picker
 </details>
 
 ## <a id="2" />Showcase
