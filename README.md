@@ -169,9 +169,9 @@ The environment use `fish` as default shell.
 
 ## <a id="3" />Requirements
 
-* Docker
-* Docker Compose
-* Some Nerd Font
+- Docker
+- Docker Compose
+- Some Nerd Font
 
 ## <a id="4" />How to use
 
@@ -515,3 +515,9 @@ The present and configured formatting tools are:
 - `stylua` for Lua files.
 
 To add a new dignostic tool, see the [Built-In sources for formatting](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#formatting) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
+
+### Atuin
+
+The <kbd>tab</kbd> functionality doesn't work.
+
+When you press <kbd>enter</kbd>, the command will be placed on the terminal, so you need to press <kbd>enter</kbd> to run it.
