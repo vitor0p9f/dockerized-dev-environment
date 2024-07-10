@@ -58,32 +58,32 @@ The environment use `fish` as default shell.
 <details open>
   <summary>Neovim</summary>
   
-  - Telescope
-  - Noice
-  - Neo-tree
-  - Lualine
-  - Barbar
-  - Which Key
-  - Lazygit
-  - Catppuccin theme
-  - Gitsigns
-  - Lazy.nvim
-  - Nvim-treesitter
-  - Trouble
-  - Mason
-  - Nvim-lspconfig
-  - None-ls
-  - Mason-null-ls
-  - Mason-lspconfig
-  - Luasnip
-  - Telescope-ui-select
-  - Nvim-cmp-lsp
-  - Nvim-cmp
-  - Cmp-luasnip
-  - Multicursors
-  - Bookmarks
-  - Nvim-highlight-colors
-  - Icon-picker
+  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+  - [Noice](https://github.com/folke/noice.nvim)
+  - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+  - [Barbar](https://github.com/romgrk/barbar.nvim)
+  - [Which Key](https://github.com/folke/which-key.nvim)
+  - [Lazygit](https://github.com/kdheepak/lazygit.nvim)
+  - [Catppuccin theme](https://github.com/catppuccin/nvim)
+  - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+  - [Lazy.nvim](https://github.com/folke/lazy.nvim)
+  - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [Trouble](https://github.com/folke/trouble.nvim)
+  - [Mason](https://github.com/williamboman/mason.nvim)
+  - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [None-ls](https://github.com/nvimtools/none-ls.nvim)
+  - [Mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
+  - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [Luasnip](https://github.com/L3MON4D3/LuaSnip)
+  - [Telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+  - [Cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+  - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - [Cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+  - [Multicursors](https://github.com/smoka7/multicursors.nvim)
+  - [Bookmarks](https://github.com/tomasky/bookmarks.nvim)
+  - [Nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)
+  - [Icon-picker](https://github.com/ziontee113/icon-picker.nvim)
 </details>
 
 ## <a id="2" />Showcase
