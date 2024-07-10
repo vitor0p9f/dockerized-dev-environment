@@ -34,8 +34,8 @@ The environment use `fish` as default shell.
 <details open>
   <summary>Git</summary>
   
-  - GitHub CLI
-  - Lazygit
+  - [GitHub CLI](https://cli.github.com/)
+  - [Lazygit](https://github.com/jesseduffield/lazygit)
 </details>
 
 <details open>
