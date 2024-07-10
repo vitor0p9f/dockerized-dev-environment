@@ -5,6 +5,7 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 -- Appearance
 
 vim.wo.number = true
+vim.opt.termguicolors = true
 
 -- Indentation
 
@@ -22,16 +23,16 @@ vim.g.mapleader = " "
 
 -- Toggle bewteen relative numbers in insert mode and absolute numbers in visual mode
 
-autocmd('InsertEnter', {
-  callback = function()
-    vim.wo.number = false
-    vim.wo.relativenumber = true
-  end
+autocmd("InsertEnter", {
+	callback = function()
+		vim.wo.number = false
+		vim.wo.relativenumber = true
+	end,
 })
 
-autocmd('InsertLeave', {
-  callback = function()
-    vim.wo.relativenumber = false
-    vim.wo.number = true
-  end
+autocmd("InsertLeave", {
+	callback = function()
+		vim.wo.relativenumber = false
+		vim.wo.number = true
+	end,
 })
