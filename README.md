@@ -48,11 +48,11 @@ The environment use `fish` as default shell.
 <details open>
   <summary>CLI</summary>
   
-  - Bat (`cat` as an alias)
-  - Exa (`ls` as an alias)
-  - Atuin
-  - Dust
-  - Zellij
+  - [Bat](https://github.com/sharkdp/bat) (`cat` as an alias)
+  - [Exa](https://github.com/ogham/exa) (`ls` as an alias)
+  - [Atuin](https://github.com/atuinsh/atuin)
+  - [Dust](https://github.com/bootandy/dust)
+  - [Zellij](https://github.com/zellij-org/zellij)
 </details>
 
 <details open>
