@@ -17,76 +17,15 @@
 
 ## Index
 
-- [Tools](#1)
-- [Showcase](#2)
+- [Showcase](#1)
+- [Tools](#2)
 - [Requirements](#3)
 - [How to use](#4)
-- [Shortcuts](#5)
-- [Remarks](#6)
+- [Commands](#5)
+- [Shortcuts](#6)
+- [Remarks](#7)
 
-## <a id="1" />Tools
-
-The environment use `fish` as default shell.
-
-- NodeJS
-- NPM
-
-<details open>
-  <summary>Git</summary>
-  
-  - [GitHub CLI](https://cli.github.com/)
-  - [Lazygit](https://github.com/jesseduffield/lazygit)
-</details>
-
-<details open>
-  <summary>asdf</summary>
-  
-  - Elixir
-  - Erlang
-</details>
-
-<details open>
-  <summary>CLI</summary>
-  
-  - [Bat](https://github.com/sharkdp/bat) (`cat` as an alias)
-  - [Exa](https://github.com/ogham/exa) (`ls` as an alias)
-  - [Atuin](https://github.com/atuinsh/atuin)
-  - [Dust](https://github.com/bootandy/dust)
-  - [Zellij](https://github.com/zellij-org/zellij)
-</details>
-
-<details open>
-  <summary>Neovim</summary>
-  
-  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-  - [Noice](https://github.com/folke/noice.nvim)
-  - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-  - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-  - [Barbar](https://github.com/romgrk/barbar.nvim)
-  - [Which Key](https://github.com/folke/which-key.nvim)
-  - [Lazygit](https://github.com/kdheepak/lazygit.nvim)
-  - [Catppuccin theme](https://github.com/catppuccin/nvim)
-  - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-  - [Lazy.nvim](https://github.com/folke/lazy.nvim)
-  - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-  - [Trouble](https://github.com/folke/trouble.nvim)
-  - [Mason](https://github.com/williamboman/mason.nvim)
-  - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-  - [None-ls](https://github.com/nvimtools/none-ls.nvim)
-  - [Mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
-  - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-  - [Luasnip](https://github.com/L3MON4D3/LuaSnip)
-  - [Telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim)
-  - [Cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-  - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-  - [Cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-  - [Multicursors](https://github.com/smoka7/multicursors.nvim)
-  - [Bookmarks](https://github.com/tomasky/bookmarks.nvim)
-  - [Nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)
-  - [Icon-picker](https://github.com/ziontee113/icon-picker.nvim)
-</details>
-
-## <a id="2" />Showcase
+## <a id="1" />Showcase
 
 <table>
   <tr>
@@ -166,6 +105,68 @@ The environment use `fish` as default shell.
     </td>
   </tr>
 </table>
+
+## <a id="2" />Tools
+
+The environment use `fish` as default shell.
+
+- NodeJS
+- NPM
+
+<details open>
+  <summary>Git</summary>
+  
+  - [GitHub CLI](https://cli.github.com/)
+  - [Lazygit](https://github.com/jesseduffield/lazygit)
+</details>
+
+<details open>
+  <summary>asdf</summary>
+  
+  - Elixir
+  - Erlang
+</details>
+
+<details open>
+  <summary>CLI</summary>
+  
+  - [Bat](https://github.com/sharkdp/bat) (`cat` as an alias)
+  - [Exa](https://github.com/ogham/exa) (`ls` as an alias)
+  - [Atuin](https://github.com/atuinsh/atuin)
+  - [Dust](https://github.com/bootandy/dust)
+  - [Zellij](https://github.com/zellij-org/zellij)
+</details>
+
+<details open>
+  <summary>Neovim</summary>
+  
+  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+  - [Noice](https://github.com/folke/noice.nvim)
+  - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+  - [Barbar](https://github.com/romgrk/barbar.nvim)
+  - [Which Key](https://github.com/folke/which-key.nvim)
+  - [Lazygit](https://github.com/kdheepak/lazygit.nvim)
+  - [Catppuccin theme](https://github.com/catppuccin/nvim)
+  - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+  - [Lazy.nvim](https://github.com/folke/lazy.nvim)
+  - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [Trouble](https://github.com/folke/trouble.nvim)
+  - [Mason](https://github.com/williamboman/mason.nvim)
+  - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [None-ls](https://github.com/nvimtools/none-ls.nvim)
+  - [Mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
+  - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [Luasnip](https://github.com/L3MON4D3/LuaSnip)
+  - [Telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+  - [Cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+  - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - [Cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+  - [Multicursors](https://github.com/smoka7/multicursors.nvim)
+  - [Bookmarks](https://github.com/tomasky/bookmarks.nvim)
+  - [Nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)
+  - [Icon-picker](https://github.com/ziontee113/icon-picker.nvim)
+</details>
 
 ## <a id="3" />Requirements
 
@@ -292,7 +293,7 @@ The environment use `fish` as default shell.
       
       		printf "  run\t\tRun the environment and bind the current working directory with container's home directory\n"
       
-      		printf "  build\t\tForce the build the container\n"
+      		printf "  build\t\tForce the build of the container\n"
       
       		printf "  stop\t\tStop the container and the Docker's daemon\n"
       
@@ -411,7 +412,7 @@ The environment use `fish` as default shell.
       
           printf "  run\t\tRun the environment and bind the current working directory with container's home directory\n"
       
-          printf "  build\t\tForce the build the container\n"
+          printf "  build\t\tForce the build of the container\n"
       
           printf "  stop\t\tStop the container and the Docker's daemon\n"
       
@@ -436,7 +437,25 @@ The environment use `fish` as default shell.
 
     OBS: `setup` only needs to be executed once, or when it is necessary to reconfigure the environment.
 
-## <a id="5" />Shortcuts
+## <a id="5" />Commands
+
+The basic syntax is:
+
+```bash
+devE COMMAND
+```
+
+The available commands are:
+
+`run` - Run the environment and bind the current working directory with container's home directory
+
+`build` - Force the build of the container
+
+`stop` - Stop the container and the Docker's daemon
+
+`remove` - Remove the container, the image and stops the Docker's daemon
+
+## <a id="6" />Shortcuts
 
 In this section, you can find all the custom shortcuts used in Neovim. The `leader` key is the spacebar.
 
@@ -476,7 +495,7 @@ Format the current buffer - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>f</kbd>
 
 Show code actions for the line under the cursor - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>a</kbd>
 
-## <a id="6" />Remarks
+## <a id="7" />Remarks
 
 ### LSP and autocomplete
 
