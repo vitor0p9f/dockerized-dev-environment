@@ -17,7 +17,7 @@
 
 ## Index
 
-- [Showcase](#1)
+- [Demonstration](#1)
 - [Tools](#2)
 - [Requirements](#3)
 - [How to use](#4)
@@ -25,7 +25,9 @@
 - [Shortcuts](#6)
 - [Remarks](#7)
 
-## <a id="1" />Showcase
+## <a id="1" />Demonstration
+
+https://github.com/user-attachments/assets/67943255-6d90-4618-a1fe-4a23e45c2f75
 
 <table>
   <tr>
