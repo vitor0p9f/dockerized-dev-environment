@@ -14,6 +14,7 @@
 - [Como utilizar](#4)
 - [Comandos](#5)
 - [Atalhos](#6)
+- [Observações](#7)
 
 ## <a id="1" />Mostruário
 
@@ -488,3 +489,49 @@ Mostrar diagnósticos para o buffer atual - <kbd>leader</kbd> + <kbd>b</kbd> + <
 Formatar o buffer atual - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>f</kbd>
 
 Mostrar ações de código para a linha abaixo do cursor - <kbd>leader</kbd> + <kbd>b</kbd> + <kbd>a</kbd>
+
+## <a id="7" />Observações
+
+### LSP e autocomplete
+
+Os servidores LSP presentes e configurados são:
+
+- `elixirls` e `nextls` para a linguagem de programação Elixir.
+- `tsserver` para as linguagens de programação: JavaSccript e Typescript.
+- `lua_ls` para a linguagem de programação Lua.
+- `css_variables` e `cssls` para CSS.
+- `dockerls` para os arquivos Dockerfile.
+
+Para adicionar um novo servidor LSP, abra o Neovim e utilize o plugin [Mason](https://github.com/williamboman/mason.nvim).
+
+Para configurar o servidor LSP, verifique os servidores disponíveis e suas configurações na página [Configuração dos Servidores](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) e cole a configuração dentro do arquivo `.config/nvim/lua/plugins/LSP/nvim-lspconfig.lua`.
+
+Autocomplete está disponível apenas para as linguagens ou tipos de arquivo com um servidor LSP instalado e configurado.
+
+Para adicionar autocomplete para uma linguagem de programação ou tipo de arquivo sem configurar um servidor LSP, veja a página de [Servidores](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md) do plugin [None-ls](https://github.com/nvimtools/none-ls.nvim) e cole a configuração no arquivo `.config/nvim/lua/plugins/LSP/none-ls.lua`.
+
+### Diagnósticos
+
+As ferramentas de diagnóstico presentes e configuradas são:
+
+- `commitlint` para mensagens de commit.
+- `hadolint` para arquivos Dockerfile.
+- `markdownlint` para Markdown.
+
+Para adicionar uma nova ferramenta de diagnóstico, veja as [Ferramentas de Diagnóstico](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#diagnostics) do plugin [None-ls](https://github.com/nvimtools/none-ls.nvim) e cole a configuração no arquivo `.config/nvim/lua/plugins/LSP/none-ls.lua`.
+
+### Formatação
+
+As ferramentas de formatação presentes e configuradas são:
+
+- `mix` e `surface` para arquivos Elixir.
+- `prettier` para arquivos Javascript, Typescript, Vue, CSS, SCSS, LESS, HTML, JSON, JSONC, YAML, Markdown, Markdown.mdx, Graphql, Handlebars, Svelte, e Astro.
+- `stylua` para arquivos Lua.
+
+Para adicionar uma nova ferramenta de formatação, veja as [Ferramentas de Formatação](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#formatting) do plugin [None-ls](https://github.com/nvimtools/none-ls.nvim) e cole a configuração no arquivo `.config/nvim/lua/plugins/LSP/none-ls.lua`.
+
+### Atuin
+
+A funcionalidade do <kbd>tab</kbd> não funciona.
+
+Quando pressionar <kbd>enter</kbd>, o comando será copiado para a linha de comando, então é necessário pressionar <kbd>enter</kbd> novamente para executá-lo.
