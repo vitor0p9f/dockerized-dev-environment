@@ -447,6 +447,8 @@ E os comandos disponíveis são:
 
 `remove` - Remove o contêiner, a imagem e para o daemon do Docker.
 
+Para sair do ambiente, execute `exit` na linha de comando.
+
 ## <a id="6" />Atalhos
 
 Nesta seção, você poderá encontrar todos os atalhos customizados utilizados no Neovim. A tecla `leader` é a barra de espaço.
