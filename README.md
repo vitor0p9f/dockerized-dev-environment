@@ -457,6 +457,8 @@ The available commands are:
 
 `remove` - Remove the container, the image and stops the Docker's daemon
 
+To leave the environment, run `exit` on the command line.
+
 ## <a id="6" />Shortcuts
 
 In this section, you can find all the custom shortcuts used in Neovim. The `leader` key is the spacebar.
