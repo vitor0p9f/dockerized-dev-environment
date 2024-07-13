@@ -285,7 +285,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
       		printf "  run\t\tRun the environment and bind the current working directory with container's home directory\n"
       
-      		printf "  build\t\tForce the build the container\n"
+      		printf "  build\t\tForce the build of the container\n"
       
       		printf "  stop\t\tStop the container and the Docker's daemon\n"
       
@@ -404,7 +404,7 @@ O ambiente utiliza o `fish` como o shell padrão.
       
           printf "  run\t\tRun the environment and bind the current working directory with container's home directory\n"
       
-          printf "  build\t\tForce the build the container\n"
+          printf "  build\t\tForce the build of the container\n"
       
           printf "  stop\t\tStop the container and the Docker's daemon\n"
       
@@ -439,13 +439,13 @@ devE COMMAND
 
 E os comandos disponíveis são:
 
-`run` - Run the environment and bind the current working directory with container's home directory
+`run` - Executa o ambiente e vincula o diretório de trabalho atual com o diretório home do contêiner.
 
-`build` - Force the build of the container
+`build` - Força o processo de build do contêiner.
 
-`stop` - Stop the container and the Docker's daemon
+`stop` - Para o contêiner e o daemon do Docker.
 
-`remove` - Remove the container, the image and stops the Docker's daemon
+`remove` - Remove o contêiner, a imagem e para o daemon do Docker.
 
 ## <a id="6" />Atalhos
 
