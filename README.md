@@ -513,7 +513,7 @@ The present and configured LSP servers are:
 
 To add a new LSP server, open the Neovim and use the [Mason](https://github.com/williamboman/mason.nvim) plugin.
 
-To configure the LSP server, check the available servers and their configurations on the [Server Configurations](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) page and paste the configuration inside the `.config/nvim/lua/plugins/LSP/nvim-lspconfig.lua` file.
+To configure the LSP server, check the available servers and their configurations on the [Server Configurations](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) page and paste the configuration into `.config/nvim/lua/plugins/LSP/nvim-lspconfig.lua` file.
 
 Autocomplete is available only for the languages or file types with an LSP server installed and configured.
 
@@ -537,10 +537,10 @@ The present and configured formatting tools are:
 - `prettier` for Javascript, Typescript, Vue, CSS, SCSS, LESS, HTML, JSON, JSONC, YAML, Markdown, Markdown.mdx, Graphql, Handlebars, Svelte, and Astro files.
 - `stylua` for Lua files.
 
-To add a new dignostic tool, see the [Built-In sources for formatting](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#formatting) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
+To add a new formatting tool, see the [Built-In sources for formatting](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#formatting) of [None-ls](https://github.com/nvimtools/none-ls.nvim) plugin and put the configuration into `.config/nvim/lua/plugins/LSP/none-ls.lua` file.
 
 ### Atuin
 
 The <kbd>tab</kbd> functionality doesn't work.
 
-When you press <kbd>enter</kbd>, the command will be placed on the terminal, so you need to press <kbd>enter</kbd> to run it.
+When you press <kbd>enter</kbd>, the command will be copied to the command line, so you need to press <kbd>enter</kbd> again to run it.
