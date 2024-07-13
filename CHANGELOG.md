@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [1.0.0] - 2024-07-13
+
+### Added
+
+New Neovim plugins:
+
+- Multicursors
+- Icon-picker
+- Bookmark
+- Nvim-highlight-colors
+
 ## [0.4.0] - 2024-07-06
 
 ### Added
