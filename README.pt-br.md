@@ -8,71 +8,16 @@
 
 ## Index
 
-- [Ferramentas](#1)
-- [Mostruário](#2)
+- [Mostruário](#1)
+- [Ferramentas](#2)
 - [Requisitos](#3)
 - [Como utilizar](#4)
-- [Atalhos](#5)
+- [Comandos](#5)
+- [Atalhos](#6)
 
-## <a id="1" />Ferramentas
+## <a id="1" />Mostruário
 
-O ambiente utiliza o `fish` como o shell padrão.
-
-- NodeJS
-- NPM
-
-<details open>
-  <summary>Git</summary>
-  
-  - GitHub CLI
-  - Lazygit
-</details>
-
-<details open>
-  <summary>asdf</summary>
-  
-  - Elixir
-  - Erlang
-</details>
-
-<details open>
-  <summary>CLI</summary>
-  
-  - Bat (`cat` como apelido)
-  - Exa (`ls` como apelido)
-  - Atuin
-  - Dust
-  - Zellij
-</details>
-
-<details open>
-  <summary>Neovim</summary>
-  
-  - Telescope
-  - Noice
-  - Neo-tree
-  - Lualine
-  - Barbar
-  - Which Key
-  - Lazygit
-  - Catppuccin theme
-  - Gitsigns
-  - Lazy.nvim
-  - Nvim-treesitter
-  - Trouble
-  - Mason
-  - Nvim-lspconfig
-  - None-ls
-  - Mason-null-ls
-  - Mason-lspconfig
-  - Luasnip
-  - Telescope-ui-select
-  - Nvim-cmp-lsp
-  - Nvim-cmp
-  - Cmp-luasnip
-</details>
-
-## <a id="2" />Mostruário
+https://github.com/user-attachments/assets/947790f8-9611-483a-96be-e77e7eb9d606
 
 <table>
   <tr>
@@ -152,6 +97,68 @@ O ambiente utiliza o `fish` como o shell padrão.
     </td>
   </tr>
 </table>
+
+## <a id="2" />Ferramentas
+
+O ambiente utiliza o `fish` como o shell padrão.
+
+- NodeJS
+- NPM
+
+<details open>
+  <summary>Git</summary>
+  
+  - [GitHub CLI](https://cli.github.com/)
+  - [Lazygit](https://github.com/jesseduffield/lazygit)
+</details>
+
+<details open>
+  <summary>asdf</summary>
+  
+  - Elixir
+  - Erlang
+</details>
+
+<details open>
+  <summary>CLI</summary>
+  
+  - [Bat](https://github.com/sharkdp/bat) (`cat` as an alias)
+  - [Exa](https://github.com/ogham/exa) (`ls` as an alias)
+  - [Atuin](https://github.com/atuinsh/atuin)
+  - [Dust](https://github.com/bootandy/dust)
+  - [Zellij](https://github.com/zellij-org/zellij)
+</details>
+
+<details open>
+  <summary>Neovim</summary>
+  
+  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+  - [Noice](https://github.com/folke/noice.nvim)
+  - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+  - [Barbar](https://github.com/romgrk/barbar.nvim)
+  - [Which Key](https://github.com/folke/which-key.nvim)
+  - [Lazygit](https://github.com/kdheepak/lazygit.nvim)
+  - [Catppuccin theme](https://github.com/catppuccin/nvim)
+  - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+  - [Lazy.nvim](https://github.com/folke/lazy.nvim)
+  - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [Trouble](https://github.com/folke/trouble.nvim)
+  - [Mason](https://github.com/williamboman/mason.nvim)
+  - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [None-ls](https://github.com/nvimtools/none-ls.nvim)
+  - [Mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
+  - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [Luasnip](https://github.com/L3MON4D3/LuaSnip)
+  - [Telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+  - [Cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+  - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - [Cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+  - [Multicursors](https://github.com/smoka7/multicursors.nvim)
+  - [Bookmarks](https://github.com/tomasky/bookmarks.nvim)
+  - [Nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)
+  - [Icon-picker](https://github.com/ziontee113/icon-picker.nvim)
+</details>
 
 ## <a id="3" />Requisitos
 
@@ -422,7 +429,25 @@ O ambiente utiliza o `fish` como o shell padrão.
 
     OBS: `setup` precisa ser executado apenas uma vez, ou quando for necessário reconfigurar o ambiente.
 
-## <a id="5" />Atalhos
+## <a id="5" />Comandos
+
+A sintaxe básica é:
+
+```bash
+devE COMMAND
+```
+
+E os comandos disponíveis são:
+
+`run` - Run the environment and bind the current working directory with container's home directory
+
+`build` - Force the build of the container
+
+`stop` - Stop the container and the Docker's daemon
+
+`remove` - Remove the container, the image and stops the Docker's daemon
+
+## <a id="6" />Atalhos
 
 Nesta seção, você poderá encontrar todos os atalhos customizados utilizados no Neovim. A tecla `leader` é a barra de espaço.
 
