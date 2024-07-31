@@ -56,11 +56,15 @@ RUN apk add --no-cache exa
 
 RUN apk add --no-cache zellij
 
-# Neovim
+# Neovim dependencies
 
 RUN apk add --no-cache ripgrep # Telescope's dependency
 
 RUN apk add --no-cache fd # Telescope's dependency
+
+RUN apk add --no-cache neovim-doc
+
+RUN apk add --no-cache wl-clipboard
 
 # Programming languages
 

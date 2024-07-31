@@ -4,6 +4,9 @@ services:
     image: dockerized-dev-environment
     container_name: dockerized-dev-environment
     tty: true
+    environment:
+      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
+      XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
     volumes:
       - type: bind
         source: ${PWD}
@@ -32,3 +35,5 @@ services:
       - ./.asdf/:/root/.asdf/
 
       - ./.local/:/root/.local/
+
+      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
