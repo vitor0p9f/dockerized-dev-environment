@@ -4,11 +4,6 @@ return {
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    lspconfig.elixirls.setup({
-      capabilities = capabilities,
-      cmd = { "/root/.local/share/nvim/mason/packages/elixir-ls/language_server.sh" },
-      root_dir = vim.loop.cwd,
-    })
 
     lspconfig.tsserver.setup({
       capabilities = capabilities,
@@ -58,19 +53,6 @@ return {
       capabilities = capabilities,
     })
 
-    lspconfig.nextls.setup({
-      capabilities = capabilities,
-      cmd = { "/root/.local/share/nvim/mason/packages/nextls/next_ls_linux_amd64", "--stdio" },
-      root_dir = vim.loop.cwd,
-      init_options = {
-        extensions = {
-          credo = { enable = true },
-        },
-        experimental = {
-          completions = { enable = true },
-        },
-      },
-    })
 
     lspconfig.css_variables.setup({
       root_dir = vim.loop.cwd,
