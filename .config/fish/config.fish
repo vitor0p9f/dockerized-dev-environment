@@ -41,3 +41,31 @@ function setup
   asdf install elixir latest
   asdf global elixir latest
 end
+
+function update
+  set_color brmagenta
+  echo "Updating asdf..."
+  set_color normal
+
+  asdf update
+
+  set_color brmagenta
+  echo "Updating all asdf plugins..."
+  set_color normal
+
+  asdf plugin update --all
+
+  set_color brmagenta
+  echo "Updating erlang..."
+  set_color normal
+
+  asdf install erlang latest
+  asdf global erlang latest
+
+  set_color brmagenta
+  echo "Updating elixir..."
+  set_color normal
+
+  asdf install elixir latest
+  asdf global elixir latest
+end
