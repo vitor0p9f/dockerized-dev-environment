@@ -5,7 +5,6 @@ return {
 
     null_ls.setup({
       sources = {
-        null_ls.builtins.formatting.mix,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.commitlint.with({
@@ -16,7 +15,6 @@ return {
           },
         }),
         null_ls.builtins.diagnostics.hadolint,
-        null_ls.builtins.formatting.surface,
         null_ls.builtins.diagnostics.markdownlint,
       },
     })
