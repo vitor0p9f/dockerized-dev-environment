@@ -24,7 +24,7 @@ function setup
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
   set_color brmagenta
-  echo "Installing erlang..."
+  echo "Installing Erlang..."
   set_color normal
 
   asdf plugin-add erlang
@@ -33,13 +33,19 @@ function setup
   asdf global erlang latest
 
   set_color brmagenta
-  echo "Installing elixir..."
+  echo "Installing Elixir..."
   set_color normal
 
   asdf plugin-add elixir
   asdf plugin-update elixir
   asdf install elixir latest
   asdf global elixir latest
+
+  set_color brmagenta
+  echo "Installing Phoenix framework dependencies..."
+  set_color normal
+
+  mix archive.install hex phx_new 
 end
 
 function update
@@ -56,14 +62,14 @@ function update
   asdf plugin update --all
 
   set_color brmagenta
-  echo "Updating erlang..."
+  echo "Updating Erlang..."
   set_color normal
 
   asdf install erlang latest
   asdf global erlang latest
 
   set_color brmagenta
-  echo "Updating elixir..."
+  echo "Updating Elixir..."
   set_color normal
 
   asdf install elixir latest
