@@ -1,6 +1,11 @@
 services:
   dockerized-dev-environment:
-    build: .
+    build:
+      context: .
+      args:
+        USER_NAME: ${USER_NAME}
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
     image: dockerized-dev-environment
     container_name: dockerized-dev-environment
     tty: true
@@ -19,31 +24,31 @@ services:
     volumes:
       - type: bind
         source: ${PWD}
-        target: /home/
+        target: /home/${USER_NAME}/workdir/
 
       - type: bind
         source: ./.config/
-        target: /root/.config/
+        target: /home/${USER_NAME}/.config/
 
       - type: bind
         source: ${HOST_HOME_DIR}/.ssh/
-        target: /root/.ssh/
+        target: /home/${USER_NAME}/.ssh/
 
       - type: bind
         source: ./.gitconfig
-        target: /root/.gitconfig
+        target: /home/${USER_NAME}/.gitconfig
 
       - type: bind
         source: ./.tool-versions
-        target: /root/.tool-versions
+        target: /home/${USER_NAME}/.tool-versions
 
       - type: bind
         source: ./commitlint.config.js
-        target: /root/.local/share/nvim/mason/packages/commitlint/commitlint.config.js
+        target: /home/${USER_NAME}/commitlint.config.js
 
-      - ./.asdf/:/root/.asdf/
+      - ./.asdf/:/home/${USER_NAME}/.asdf/
 
-      - ./.local/:/root/.local/
+      - ./.local/:/home/${USER_NAME}/.local/
 
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
 

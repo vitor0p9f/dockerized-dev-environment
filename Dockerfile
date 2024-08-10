@@ -71,3 +71,23 @@ RUN apk add --no-cache xclip
 # Programming languages
 
 RUN apk add --no-cache nodejs npm
+
+# System
+
+ARG GROUP_ID
+ARG USER_ID
+ARG USER_NAME
+
+RUN apk add --no-cache shadow su-exec # 'shadow' package adds the 'useradd' command
+
+RUN groupadd -g ${GROUP_ID} ${USER_NAME}
+
+RUN useradd -u ${USER_ID} -g ${GROUP_ID} ${USER_NAME}
+
+RUN chmod u+s /sbin/su-exec
+
+USER ${USER_NAME}
+
+RUN su-exec root mkdir .asdf/
+
+WORKDIR /home/${USER_NAME}/workdir/

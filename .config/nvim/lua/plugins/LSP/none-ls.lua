@@ -11,7 +11,10 @@ return {
           prefer_local = "/root/.local/share/nvim/mason/bin/commitlint",
           extra_args = {
             "--config",
-            "/root/.local/share/nvim/mason/packages/commitlint/commitlint.config.js",
+            string.format(
+              "/home/%s/.local/share/nvim/mason/packages/commitlint/commitlint.config.js",
+              os.getenv("USER")
+            ),
           },
         }),
         null_ls.builtins.diagnostics.hadolint,

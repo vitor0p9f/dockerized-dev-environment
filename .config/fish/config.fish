@@ -9,11 +9,16 @@ end
 source ~/.asdf/asdf.fish # Add asdf to $PATH
 
 function setup
-	set_color brmagenta
+  su-exec root chown $USER ~/.asdf/
+  su-exec root chown $USER ~/.local/
+  su-exec root chown $USER ~/.ssh/
+  su-exec root cp ~/commitlint.config.js ~/.local/share/nvim/mason/packages/commitlint/commitlint.config.js
+	
+  set_color brmagenta
   echo "Installing asdf..."
   set_color normal
 	
-	git clone https://github.com/asdf-vm/asdf.git /root/.asdf/ --branch v0.14.0
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf/ --branch v0.14.0
 
 	source ~/.asdf/asdf.fish # Add asdf to $PATH
 
