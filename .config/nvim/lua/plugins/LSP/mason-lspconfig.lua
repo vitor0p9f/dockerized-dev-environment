@@ -9,6 +9,7 @@ return {
 				"dockerls",
 				"css_variables",
 				"cssls",
+				"bashls",
 			},
 			automatic_installation = true,
 		})

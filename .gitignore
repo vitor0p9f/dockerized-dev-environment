@@ -4,5 +4,6 @@
 .config/fish/conf.d
 .config/atuin
 .config/lazygit
+.config/nvim/lazy-lock.json
 .asdf/
 .local/

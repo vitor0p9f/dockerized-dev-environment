@@ -68,5 +68,9 @@ return {
 			capabilities = capabilities,
 			root_dir = vim.loop.cwd,
 		})
+
+		lspconfig.bashls.setup({
+			capabilities = capabilities,
+		})
 	end,
 }
