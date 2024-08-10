@@ -66,6 +66,8 @@ RUN apk add --no-cache neovim-doc
 
 RUN apk add --no-cache wl-clipboard
 
+RUN apk add --no-cache xclip
+
 # Programming languages
 
 RUN apk add --no-cache nodejs npm

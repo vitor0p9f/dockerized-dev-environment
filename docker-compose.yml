@@ -15,6 +15,7 @@ services:
     environment:
       WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
+      DISPLAY: ${DISPLAY}
     volumes:
       - type: bind
         source: ${PWD}
@@ -45,3 +46,5 @@ services:
       - ./.local/:/root/.local/
 
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
+
+      - /tmp/.X11-unix:/tmp/.X11-unix
