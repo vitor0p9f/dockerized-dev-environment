@@ -4,13 +4,13 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		lspconfig.lexical.setup({
-			capabilities = capabilities,
-			root_dir = function(fname)
-				return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
-			end,
-			cmd = { "/root/.local/share/nvim/mason/packages/lexical/lexical" },
-		})
+    lspconfig.lexical.setup({
+      capabilities = capabilities,
+      root_dir = function(fname)
+        return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+      end,
+      cmd = { string.format("/home/%s/.local/share/nvim/mason/packages/lexical/lexical", os.getenv("USER")) },
+    })
 
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
