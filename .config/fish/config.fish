@@ -1,18 +1,21 @@
 if status is-interactive
   # Commands to run in interactive sessions can go here
+
+  su-exec root chown -R $USER ~/.asdf/
+  su-exec root chown -R $USER ~/.local/
+  su-exec root chown -R $USER ~/.ssh/
+  su-exec root chown -R $USER /usr/
+
   atuin init fish | source
 
 	alias ls="exa --all --icons --long"
 	alias cat="bat"
+
+  source ~/.asdf/asdf.fish # Add asdf to $PATH
+  source ~/.asdf/completions/asdf.fish # Enable completions for fish
 end
 
-source ~/.asdf/asdf.fish # Add asdf to $PATH
-
 function setup
-  su-exec root chown $USER ~/.asdf/
-  su-exec root chown $USER ~/.local/
-  su-exec root chown $USER ~/.ssh/
-  su-exec root cp ~/commitlint.config.js ~/.local/share/nvim/mason/packages/commitlint/commitlint.config.js
 	
   set_color brmagenta
   echo "Installing asdf..."

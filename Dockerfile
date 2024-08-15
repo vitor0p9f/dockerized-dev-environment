@@ -74,6 +74,8 @@ RUN apk add --no-cache nodejs npm
 
 # System
 
+## Add host user and group
+
 ARG GROUP_ID
 ARG USER_ID
 ARG USER_NAME
@@ -84,10 +86,10 @@ RUN groupadd -g ${GROUP_ID} ${USER_NAME}
 
 RUN useradd -u ${USER_ID} -g ${GROUP_ID} ${USER_NAME}
 
+## Enable su-exec
+
 RUN chmod u+s /sbin/su-exec
 
 USER ${USER_NAME}
-
-RUN su-exec root mkdir .asdf/
 
 WORKDIR /home/${USER_NAME}/workdir/
