@@ -10,6 +10,7 @@ return {
 				"css_variables",
 				"cssls",
 				"bashls",
+        "elixirls"
 			},
 			automatic_installation = true,
 		})

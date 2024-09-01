@@ -4,13 +4,32 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    lspconfig.lexical.setup({
-      capabilities = capabilities,
-      root_dir = function(fname)
-        return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
-      end,
-      cmd = { string.format("/home/%s/.local/share/nvim/mason/packages/lexical/lexical", os.getenv("USER")) },
-    })
+		lspconfig.elixirls.setup({
+			capabilities = capabilities,
+			root_dir = function(fname)
+				return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+			end,
+			cmd = {
+				string.format(
+					"/home/%s/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
+					os.getenv("USER")
+				),
+			},
+			settings = {
+				elixirLS = {
+					autoBuild = false,
+					dialyzerEnabled = false,
+					incrementalDialyzer = false,
+					dialyzerWarnOpts = false,
+					dialyzerFormat = false,
+					fetchDeps = false,
+					suggestSpecs = false,
+					autoInsertRequiredAlias = true,
+					signatureAfterComplete = true,
+					enableTestLenses = true,
+				},
+			},
+		})
 
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
