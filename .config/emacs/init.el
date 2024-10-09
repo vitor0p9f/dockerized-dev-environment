@@ -1,0 +1,119 @@
+(require 'package)
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+(package-initialize)
+(unless package-archive-contents
+(package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+(package-refresh-contents)
+(package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(use-package diminish)
+
+(use-package elixir-mode)
+
+(use-package python-mode)
+
+(use-package lsp-mode
+            :commands lsp-deferred
+            :diminish lsp-mode
+            :hook(
+                    (lsp-mode . lsp-enable-which-key-integration)
+                    (elixir-mode . lsp-deferred)
+            )
+            :init
+            (setq lsp-keymap-prefix "C-c l")
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default standard-indent 2)
+:config
+(define-key lsp-mode-map (kbd "C-c f") 'lsp-format-buffer)
+            )
+
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((emacs-lisp . t)
+    (python . t)))
+
+;; Automatically tangle config.org config file when we save it
+(defun efs/org-babel-tangle-config ()
+  (when (string-equal (buffer-file-name)
+                      (expand-file-name "~/.config/emacs/config.org"))
+    ;; Dynamic scoping to the rescue
+    (let ((org-confirm-babel-evaluate nil))
+      (org-babel-tangle))))
+
+(add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'efs/org-babel-tangle-config)))
+
+(add-hook 'org-mode-hook (lambda ()
+                          (setq indent-tabs-mode nil)  ;; Use espaços
+                          (setq tab-width 2)           ;; Defina a largura do tab
+                          (org-indent-mode)))          ;; Ativa a indentação de org
+
+(load-theme 'wombat)
+
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 2)
+
+(add-to-list 'exec-path "~/elixir-ls/release")
+
+(use-package lsp-pyright
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp-deferred))))  ; or lsp-deferred
+
+(use-package lsp-ui
+:hook (lsp-mode . lsp-ui-mode))
+
+(use-package company
+:after lsp-mode
+:hook (prog-mode . company-mode)
+:bind (:map company-active-map
+       ("<tab>" . company-complete-selection))
+      (:map lsp-mode-map
+       ("<tab>" . company-indent-or-complete-common))
+:custom
+(company-minimum-prefix-length 1)
+(company-idle-delay 0.0))
+
+(use-package company-box
+:hook (company-mode . company-box-mode))
+
+(use-package typescript-mode
+:mode "\\.ts\\'"
+:hook (typescript-mode . lsp-deferred)
+:config
+(setq typescript-indent-level 2))
+
+(use-package js2-mode
+:mode "\\.js\\'"
+:hook (js2-mode . lsp-deferred)
+:config
+(setq js2-basic-offset 2))
+
+(use-package web-mode
+:ensure t
+:mode (("\\.html?\\'" . web-mode)
+       ("\\.php\\'" . web-mode)
+       ("\\.jsp\\'" . web-mode)
+       ("\\.aspx\\'" . web-mode)
+       ("\\.erb\\'" . web-mode)
+       ("\\.vue\\'" . web-mode)
+       ("\\.ejs\\'" . web-mode))
+:config
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-enable-auto-pairing t)
+(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-css-colorization t)
+(define-key web-mode-map (kbd "C-c C-e") 'web-mode-element-close)
+(define-key web-mode-map (kbd "C-c C-p") 'web-mode-element-parent))(use-package web-mode)

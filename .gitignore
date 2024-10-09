@@ -7,3 +7,7 @@
 .config/nvim/lazy-lock.json
 .asdf/
 .local/
+.cache/
+.config/emacs/.cache/
+.config/emacs/elpa/
+.config/emacs/auto-save-list/

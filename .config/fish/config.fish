@@ -5,6 +5,7 @@ if status is-interactive
   su-exec root chown -R $USER ~/.local/
   su-exec root chown -R $USER ~/.ssh/
   su-exec root chown -R $USER /usr/
+  su-exec root chown -R $USER ~/.cache/
 
   atuin init fish | source
 
@@ -13,9 +14,13 @@ if status is-interactive
 
   source ~/.asdf/asdf.fish # Add asdf to $PATH
   source ~/.asdf/completions/asdf.fish # Enable completions for fish
+  
+  # Environment variables
+  set -x LOCALHOST_IP 127.0.0.1
 end
 
 function setup
+  cp ~/commitlint.config.js ~/.local/share/nvim/mason/packages/commitlint/commitlint.config.js
 	
   set_color brmagenta
   echo "Installing asdf..."
@@ -31,12 +36,18 @@ function setup
 
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
+  source ~/.asdf/completions/asdf.fish
+
+  install_programming_languages
+end
+
+function install_programming_languages
   set_color brmagenta
   echo "Installing Erlang..."
   set_color normal
 
-  asdf plugin-add erlang
-  asdf plugin-update erlang
+  asdf plugin add erlang
+  asdf plugin update erlang
   asdf install erlang latest
   asdf global erlang latest
 
@@ -44,19 +55,22 @@ function setup
   echo "Installing Elixir..."
   set_color normal
 
-  asdf plugin-add elixir
-  asdf plugin-update elixir
+  asdf plugin add elixir
+  asdf plugin update elixir
   asdf install elixir latest
   asdf global elixir latest
 
   set_color brmagenta
-  echo "Installing Phoenix framework dependencies..."
+  echo "Installing Python..."
   set_color normal
 
-  mix archive.install hex phx_new 
+  asdf plugin add python
+  asdf plugin update python
+  asdf install python latest
+  asdf global python latest
 end
 
-function update
+function update_programing_languages
   set_color brmagenta
   echo "Updating asdf..."
   set_color normal
@@ -82,4 +96,11 @@ function update
 
   asdf install elixir latest
   asdf global elixir latest
+
+  set_color brmagenta
+  echo "Updating Python..."
+  set_color normal
+
+  asdf install python latest
+  asdf global python latest
 end

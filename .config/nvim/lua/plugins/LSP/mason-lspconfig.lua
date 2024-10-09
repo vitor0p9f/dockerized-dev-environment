@@ -10,7 +10,9 @@ return {
 				"css_variables",
 				"cssls",
 				"bashls",
-        "elixirls"
+        "elixirls",
+        "html",
+        "tailwindcss"
 			},
 			automatic_installation = true,
 		})

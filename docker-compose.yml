@@ -9,17 +9,19 @@ services:
     image: dockerized-dev-environment
     container_name: dockerized-dev-environment
     tty: true
-    deploy:
-      resources:
-        limits:
-          memory: 4.5G
-        reservations:
-          cpus: "2"
-          memory: 2G
+    #deploy:
+    #  resources:
+    #    limits:
+    #      memory: 4G
     environment:
       WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
       DISPLAY: ${DISPLAY}
+    ports:
+      - 127.0.0.1:4000:4000
+      #- 127.0.0.1:8000:8000
+    networks:
+      - projects-network
     volumes:
       - type: bind
         source: ${PWD}
@@ -49,6 +51,12 @@ services:
 
       - ./.local/:/home/${USER_NAME}/.local/
 
+      - ./elixir-ls/:/home/${USER_NAME}/elixir-ls/
+
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
 
       - /tmp/.X11-unix:/tmp/.X11-unix
+
+networks:
+  projects-network:
+    external: true

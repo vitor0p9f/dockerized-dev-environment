@@ -1,22 +1,26 @@
-FROM alpine:3.20
+FROM alpine:3.20.3
 
-# Dependencies
+# asdf
 
-RUN apk add --no-cache curl # asdf dependency
+## Dependencies
 
-RUN apk add --no-cache bash # asdf dependency
+RUN apk add --no-cache curl bash
 
-RUN apk add --no-cache build-base # asdf erlang dependency
+## Shared dependencies
 
-RUN apk add --no-cache openssl-dev # asdf erlang dependency
+RUN apk add --no-cache libffi-dev openssl-dev # asdf erlang and python dependency
 
-RUN apk add --no-cache automake # asdf erlang dependency
+## Erlang dependencies
 
-RUN apk add --no-cache autoconf # asdf erlang dependency
+RUN apk add --no-cache automake autoconf ncurses-dev build-base
 
-RUN apk add --no-cache ncurses-dev # asdf erlang dependency
+## Elixir dependencies
 
-RUN apk add --no-cache unzip # asdf elixir dependency
+RUN apk add --no-cache unzip inotify-tools
+
+## Python dependencies
+
+RUN apk add --no-cache readline-dev sqlite-dev zlib-dev
 
 # Shell
 
@@ -70,7 +74,15 @@ RUN apk add --no-cache xclip
 
 # Programming languages
 
-RUN apk add --no-cache nodejs npm
+RUN apk add --no-cache nodejs npm openjdk21 maven
+
+RUN apk add --no-cache gtk+3.0 emacs-gtk3 fontconfig font-dejavu
+
+# Emacs LSP servers
+
+RUN npm install -g typescript typescript-language-server
+
+RUN npm install -g vscode-langservers-extracted # HTML LSP
 
 # System
 
