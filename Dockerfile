@@ -32,9 +32,10 @@ RUN apk add --no-cache gzip
 
 RUN apk add --no-cache lazygit
 
-# Neovim
+# Text editors
 
 RUN apk add --no-cache neovim
+RUN apk add --no-cache gtk+3.0 emacs-gtk3 fontconfig font-dejavu
 
 # System
 

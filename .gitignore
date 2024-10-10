@@ -7,3 +7,4 @@
 .config/nvim/lazy-lock.json
 .asdf/
 .local/
+.config/emacs/elpa/
