@@ -17,7 +17,6 @@ services:
           cpus: "2"
           memory: 2G
     environment:
-      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
       DISPLAY: ${DISPLAY}
     volumes:
@@ -40,10 +39,6 @@ services:
       - type: bind
         source: ./.tool-versions
         target: /home/${USER_NAME}/.tool-versions
-
-      - type: bind
-        source: ./commitlint.config.js
-        target: /home/${USER_NAME}/commitlint.config.js
 
       - ./.asdf/:/home/${USER_NAME}/.asdf/
 
