@@ -8,3 +8,5 @@
 .asdf/
 .local/
 .config/emacs/elpa/
+.config/gtk*/
+.config/glib*/
