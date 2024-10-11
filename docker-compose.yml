@@ -20,6 +20,8 @@ services:
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
       DISPLAY: ${DISPLAY}
     volumes:
+      - asdf:/home/${USER_NAME}/.asdf/
+       
       - type: bind
         source: ${PWD}
         target: /home/${USER_NAME}/workdir/
@@ -39,11 +41,12 @@ services:
       - type: bind
         source: ./.tool-versions
         target: /home/${USER_NAME}/.tool-versions
-
-      - ./.asdf/:/home/${USER_NAME}/.asdf/
-
+        
       - ./.local/:/home/${USER_NAME}/.local/
 
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
 
       - /tmp/.X11-unix:/tmp/.X11-unix
+
+volumes:
+  asdf:
