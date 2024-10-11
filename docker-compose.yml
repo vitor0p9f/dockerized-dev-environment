@@ -9,18 +9,17 @@ services:
     image: dockerized-dev-environment
     container_name: dockerized-dev-environment
     tty: true
-    deploy:
-      resources:
-        limits:
-          memory: 4.5G
-        reservations:
-          cpus: "2"
-          memory: 2G
     environment:
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
       DISPLAY: ${DISPLAY}
     volumes:
       - asdf:/home/${USER_NAME}/.asdf/
+
+      - local:/home/${USER_NAME}/.local/
+
+      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
+
+      - /tmp/.X11-unix:/tmp/.X11-unix
        
       - type: bind
         source: ${PWD}
@@ -42,11 +41,6 @@ services:
         source: ./.tool-versions
         target: /home/${USER_NAME}/.tool-versions
         
-      - ./.local/:/home/${USER_NAME}/.local/
-
-      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
-
-      - /tmp/.X11-unix:/tmp/.X11-unix
-
 volumes:
   asdf:
+  local:
