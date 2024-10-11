@@ -8,17 +8,13 @@ ARG GROUP_ID
 ARG USER_ID
 ARG USER_NAME
 
-RUN apk add --no-cache shadow su-exec # 'shadow' package adds the 'useradd' command
+RUN apk add --no-cache shadow # 'shadow' package adds the 'useradd' command
 
 RUN groupadd -g ${GROUP_ID} ${USER_NAME}
 
 RUN useradd -u ${USER_ID} -g ${GROUP_ID} ${USER_NAME}
 
-## Enable su-exec
-
-RUN chmod u+s /sbin/su-exec
-
-# Enable SSH
+## Enable SSH
 
 RUN apk add --no-cache openssh
 
@@ -26,25 +22,7 @@ RUN apk add --no-cache openrc
 
 RUN rc-update add sshd
 
-# Dependencies
-
-RUN apk add --no-cache curl # asdf dependency
-
-RUN apk add --no-cache bash # asdf dependency
-
-RUN apk add --no-cache build-base # asdf erlang dependency
-
-RUN apk add --no-cache openssl-dev # asdf erlang dependency
-
-RUN apk add --no-cache automake # asdf erlang dependency
-
-RUN apk add --no-cache autoconf # asdf erlang dependency
-
-RUN apk add --no-cache ncurses-dev # asdf erlang dependency
-
-RUN apk add --no-cache unzip # asdf elixir dependency
-
-# Shell
+## SHELL
 
 RUN apk add --no-cache fish
 
@@ -61,6 +39,7 @@ RUN apk add --no-cache lazygit
 # Text editors
 
 RUN apk add --no-cache neovim
+
 RUN apk add --no-cache gtk+3.0 emacs-gtk3 fontconfig font-dejavu
 
 # CLI
@@ -74,6 +53,32 @@ RUN apk add --no-cache atuin
 RUN apk add --no-cache exa
 
 # asdf
+
+## Dependencies
+
+### asdf itself
+
+RUN apk add --no-cache curl
+
+RUN apk add --no-cache bash
+
+### Erlang
+
+RUN apk add --no-cache build-base
+
+RUN apk add --no-cache openssl-dev
+
+RUN apk add --no-cache automake
+
+RUN apk add --no-cache autoconf
+
+RUN apk add --no-cache ncurses-dev
+
+### Elixir
+
+RUN apk add --no-cache unzip
+
+## Installation
 
 RUN git clone https://github.com/asdf-vm/asdf.git /home/${USER_NAME}/.asdf --branch v0.14.1
 
@@ -90,3 +95,5 @@ RUN apk add --no-cache nodejs npm
 USER ${USER_NAME}
 
 WORKDIR /home/${USER_NAME}/workdir/
+
+CMD ["fish"]
