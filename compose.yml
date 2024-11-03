@@ -4,3 +4,5 @@ services:
     container_name: dockerized-dev-environment
     image: dockerized-dev-environment-image
     tty: true
+    stdin_open: true
+    command: fish
