@@ -6,3 +6,8 @@ services:
     tty: true
     stdin_open: true
     command: fish
+    volumes:
+      - nix:/nix
+
+volumes:
+  nix:
