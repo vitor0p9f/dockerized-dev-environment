@@ -26,3 +26,11 @@ lazygit \
 github-cli
 
 RUN gh config set git_protocol ssh
+
+
+## Users  and Groups
+
+ARG USER_ID
+ARG USER_NAME
+
+RUN adduser -u ${USER_ID} -D ${USER_NAME} -G users
