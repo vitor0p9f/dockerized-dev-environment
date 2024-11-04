@@ -16,5 +16,10 @@ services:
     volumes:
       - nix:/nix
 
+      - type: bind
+        source: ./config/
+        target: /home/${USER_NAME}/.config/
+
 volumes:
   nix:
+    name: dockerized-dev-environment-nix

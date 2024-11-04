@@ -30,7 +30,13 @@ RUN gh config set git_protocol ssh
 
 ## Users  and Groups
 
+RUN apk add --no-cache su-exec
+
 ARG USER_ID
 ARG USER_NAME
 
 RUN adduser -u ${USER_ID} -D ${USER_NAME} -G users
+
+RUN chmod u+s /sbin/su-exec
+
+WORKDIR /home/${USER_NAME}
