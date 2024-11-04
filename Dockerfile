@@ -27,6 +27,12 @@ github-cli
 
 RUN gh config set git_protocol ssh
 
+## SSH
+
+RUN apk add --no-cache openssh \
+openrc
+
+RUN rc-update add sshd
 
 ## Users  and Groups
 

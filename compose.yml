@@ -15,6 +15,7 @@ services:
       - .env
     volumes:
       - nix:/nix
+      - ssh:/home/${USER_NAME}/.ssh
       - local:/home/${USER_NAME}/.local
 
       - type: bind
@@ -24,5 +25,7 @@ services:
 volumes:
   nix:
     name: dockerized-dev-environment-nix
+  ssh:
+    name: dockerized-dev-environment-ssh
   local:
     name: dockerized-dev-environment-local
