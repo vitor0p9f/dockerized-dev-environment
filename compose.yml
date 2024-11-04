@@ -15,6 +15,7 @@ services:
       - .env
     volumes:
       - nix:/nix
+      - local:/home/${USER_NAME}/.local
 
       - type: bind
         source: ./config/
@@ -23,3 +24,5 @@ services:
 volumes:
   nix:
     name: dockerized-dev-environment-nix
+  local:
+    name: dockerized-dev-environment-local
