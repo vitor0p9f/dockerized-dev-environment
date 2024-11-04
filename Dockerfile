@@ -45,4 +45,6 @@ RUN adduser -u ${USER_ID} -D ${USER_NAME} -G users
 
 RUN chmod u+s /sbin/su-exec
 
-WORKDIR /home/${USER_NAME}
+RUN mkdir /home/${USER_NAME}/workdir
+
+WORKDIR /home/${USER_NAME}/workdir
