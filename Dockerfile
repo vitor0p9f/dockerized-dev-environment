@@ -19,6 +19,10 @@ RUN apk add --no-cache fish
 
 RUN curl -L https://nixos.org/nix/install | sh -s -- --daemon
 
+### Direnv
+
+RUN apk add --no-cache direnv
+
 ## Git
 
 RUN apk add --no-cache git \
