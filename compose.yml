@@ -26,6 +26,10 @@ services:
         source: /home/${USER_NAME}/Documents/Programming/
         target: /home/${USER_NAME}/workdir/
 
+      - type: bind
+        source: ./config/tmux/.tmux.conf
+        target: /home/${USER_NAME}/.tmux.conf
+
 volumes:
   nix:
     name: dockerized-dev-environment-nix

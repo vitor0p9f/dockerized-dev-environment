@@ -23,6 +23,10 @@ RUN curl -L https://nixos.org/nix/install | sh -s -- --daemon
 
 RUN apk add --no-cache direnv
 
+### Tmux
+
+RUN apk add --no-cache tmux
+
 ## Git
 
 RUN apk add --no-cache git \
