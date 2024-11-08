@@ -10,7 +10,9 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache curl \
 xz \
 bash \
-shadow
+shadow \
+emacs-gtk3 \
+font-dejavu
 
 ## Shell
 RUN apk add --no-cache fish
