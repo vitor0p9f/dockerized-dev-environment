@@ -30,4 +30,22 @@
 
 ## How to install
 
+1. Grant that the `~/Documents/Programming/` directory exists.
+
+2. Clone this repository inside `~/Documents/Programming/`.
+
+3. Grant run permission to the `init.sh` file using `chmod +x init.sh`.
+
+4. Add the following alias to your shell
+
+    <details open>
+      <summary>Bash</summary>
+    
+      ```Bash
+        alias devE="~/Documents/Programming/dockerized-dev-environment/init.sh"
+      ```
+    </details>
+
+5. Run the `devE build` command. You'll need 
+
 ## Create development environments with nix-shell and Direnv
