@@ -49,3 +49,33 @@
 5. Run the `devE build` command. You'll need 
 
 ## Create development environments with nix-shell and Direnv
+
+1. Make a directory inside the `~/Documents/Programming`.
+
+2. Create a `.envrc` file with the following content:
+
+    ```
+      use nix ./shell.nix
+    ```
+3. Create a `shell.nix` file with the following content:
+
+   ```nix
+     { pkgs ? import <nixpkgs> {} }:
+     pkgs.mkShell {
+       buildInputs = [
+         # Declare here the packages to install
+         pkgs.packageName
+       ];
+  
+       # Declare here the commands that the shell must run on start-up
+       shellHook = ''
+       '';
+  
+       # Declare here your environment variables. Declare the variables like the example below
+       TESTE = "some_value";
+     }
+   ```
+
+ 4. Run `direnv allow` inside the project directory to allow Direnv automatically start the environment.
+
+ 5. The environment will be loaded every time you enter the project directory and unloaded when you exit it. 
