@@ -21,16 +21,18 @@ services:
       - nix:/nix
       - ssh:/home/${USER_NAME}/.ssh
       - local:/home/${USER_NAME}/.local
+      - gh:/home/${USER_NAME}/.config/gh
+
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
       - /tmp/.X11-unix:/tmp/.X11-unix
 
       - type: bind
-        source: ./config/
-        target: /home/${USER_NAME}/.config/
+        source: ./config/fish
+        target: /home/${USER_NAME}/.config/fish
 
       - type: bind
-        source: /home/${USER_NAME}/Documents/Programming/
-        target: /home/${USER_NAME}/workdir/
+        source: /home/${USER_NAME}/Documents/Programming
+        target: /home/${USER_NAME}/workdir
 
       - type: bind
         source: ./config/tmux/.tmux.conf
@@ -43,3 +45,5 @@ volumes:
     name: dockerized-dev-environment-ssh
   local:
     name: dockerized-dev-environment-local
+  gh:
+    name: dockerized-dev-environment-gh
