@@ -4,7 +4,7 @@
   This project consists of a portable development environment. Its purpose is to provide a manner to access your development environment in any operational system that supports docker and docker-compose without much effort or configuration.
 </p>
 
-## Requirements
+## Requirements - Linux
 
 * Docker
 * Docker Compose
@@ -27,3 +27,7 @@
   * Tmux
   * Direnv
 </details>
+
+## How to install
+
+## Create development environments with nix-shell and Direnv
