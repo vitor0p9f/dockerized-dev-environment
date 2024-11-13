@@ -38,6 +38,10 @@ services:
         source: ./config/tmux/.tmux.conf
         target: /home/${USER_NAME}/.tmux.conf
 
+      - type: bind
+        source: ./config/emacs
+        target: /home/${USER_NAME}/.config/emacs
+
 volumes:
   nix:
     name: dockerized-dev-environment-nix

@@ -1,0 +1,23 @@
+#+title: Emacs configuration
+#+author: Vítor Pereira Fontes
+#+date: 2024-11-10
+#+PROPERTY: header-args:emacs-lisp :tangle ./init.el :mkdirp yes
+
+* Babel configuration
+
+** Tangle code blocks on save
+
+#+begin_src emacs-lisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)))
+
+  (defun efs/org-babel-tangle-config ()
+    (when (string-equal (buffer-file-name)
+                        (expand-file-name "~/.config/emacs/config.org"))
+
+      (let ((org-confirm-babel-evaluate nil))
+        (org-babel-tangle))))
+
+  (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'efs/org-babel-tangle-config)))
+#+end_src
