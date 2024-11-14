@@ -1,3 +1,7 @@
 # Files
 
 .env
+
+# Directories
+
+config/emacs/elpa
