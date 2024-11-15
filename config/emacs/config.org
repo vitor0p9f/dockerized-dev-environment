@@ -39,17 +39,31 @@
 
   (defun efs/org-babel-tangle-config ()
     (when (string-equal (buffer-file-name)
-                        (expand-file-name "~/.config/emacs/config.org"))
+			(expand-file-name "~/.config/emacs/config.org"))
 
       (let ((org-confirm-babel-evaluate nil))
-        (org-babel-tangle))))
+	(org-babel-tangle))))
 
   (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'efs/org-babel-tangle-config)))
 #+end_src
 
+** Identation on org files
+
 #+begin_src emacs-lisp
+  (add-hook 'org-mode-hook (lambda ()
+			     (setq indent-tabs-mode nil)
+			     (setq tab-width 2)
+			     (org-indent-mode)))
+#+end_src
 
+** Bullets
 
+#+begin_src emacs-lisp
+  (use-package org-bullets
+    :ensure t
+    :hook (org-mode . org-bullets-mode)
+    :config
+    (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")))
 #+end_src
 
 
