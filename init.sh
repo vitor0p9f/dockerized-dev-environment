@@ -25,7 +25,9 @@ else
     "build")
       sudo systemctl start docker
 
-      sudo docker-compose --file $repository_directory/compose.yml up -d --build
+      sudo docker-compose --file $repository_directory/compose.yml build --no-cache
+
+      sudo docker-compose --file $repository_directory/compose.yml up -d
 
       sudo docker compose --file $repository_directory/compose.yml exec -it dockerized-dev-environment fish
     ;;
@@ -41,7 +43,7 @@ else
 
       sudo docker-compose --file $repository_directory/compose.yml down -v
 
-      sudo docker rmi dockerized-dev-environment
+      sudo docker rmi dockerized-dev-environment-image
     ;;
   esac
 fi
