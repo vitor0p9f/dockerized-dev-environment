@@ -42,6 +42,10 @@ services:
         source: ./config/emacs
         target: /home/${USER_NAME}/.config/emacs
 
+      - type: bind
+        source: ./config/nix
+        target: /home/${USER_NAME}/.config/nix
+
 volumes:
   nix:
     name: dockerized-dev-environment-nix
