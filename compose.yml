@@ -22,6 +22,7 @@ services:
       - ssh:/home/${USER_NAME}/.ssh
       - local:/home/${USER_NAME}/.local
       - gh:/home/${USER_NAME}/.config/gh
+      - tmp:/home/${USER_NAME}/tmp
 
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
       - /tmp/.X11-unix:/tmp/.X11-unix
@@ -55,3 +56,5 @@ volumes:
     name: dockerized-dev-environment-local
   gh:
     name: dockerized-dev-environment-gh
+  tmp:
+    name: dockerized-dev-environment-tmp
