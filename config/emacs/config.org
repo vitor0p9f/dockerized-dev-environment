@@ -112,3 +112,16 @@
     (load-theme 'kanagawa-dragon t))
 #+end_src
 
+*** Font size
+
+#+begin_src emacs-lisp
+  (set-face-attribute 'default nil :height 120)
+#+end_src
+
+*** General identation (2 spaces)
+
+#+begin_src emacs-lisp
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq-default standard-indent 2)
+#+end_src
