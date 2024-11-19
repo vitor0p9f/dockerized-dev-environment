@@ -5,3 +5,4 @@
 # Directories
 
 config/emacs/elpa
+config/emacs/straight
