@@ -86,5 +86,29 @@
         (goto-char (point-max))
         (eval-print-last-sexp)))
     (load bootstrap-file nil 'nomessage))
+* UI
 
+** Emacs configuration
+
+*** Line numbers
+
+#+begin_src emacs-lisp
+  (column-number-mode)
+  (global-display-line-numbers-mode t)
 #+end_src
+
+*** Rainbow delimiters
+
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+    :hook (prog-mode . rainbow-delimiters-mode))
+#+end_src
+
+*** Theme
+
+#+begin_src emacs-lisp
+  (use-package kanagawa-themes
+    :config
+    (load-theme 'kanagawa-dragon t))
+#+end_src
+
