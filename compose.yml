@@ -22,6 +22,8 @@ services:
       - ssh:/home/${USER_NAME}/.ssh
       - local:/home/${USER_NAME}/.local
       - gh:/home/${USER_NAME}/.config/gh
+      - mix:/home/${USER_NAME}/.mix
+      - hex:/home/${USER_NAME}/.hex
       - tmp:/home/${USER_NAME}/tmp
 
       - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}
@@ -56,5 +58,9 @@ volumes:
     name: dockerized-dev-environment-local
   gh:
     name: dockerized-dev-environment-gh
+  mix:
+    name: dockerized-dev-environment-mix
+  hex:
+    name: dockerized-dev-environment-hex
   tmp:
     name: dockerized-dev-environment-tmp

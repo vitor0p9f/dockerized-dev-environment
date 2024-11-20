@@ -68,6 +68,14 @@
 
 * Packages
 
+** LSP modes
+
+*** Elixir
+
+#+begin_src emacs-lisp
+  (use-package elixir-mode)
+#+end_src
+
 ** Straight
 
 #+begin_src emacs-lisp
@@ -108,6 +116,15 @@
     :init
     (global-lsp-bridge-mode))
 #+end_src
+
+** LSP servers
+
+*** Elixir
+
+#+begin_src emacs-lisp
+  (add-hook 'elixir-mode-hook #'lsp-bridge-mode)
+#+end_src
+
 * UI
 
 ** Emacs configuration
