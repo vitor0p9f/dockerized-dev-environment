@@ -58,3 +58,11 @@ RUN chmod u+s /sbin/su-exec
 RUN mkdir /home/${USER_NAME}/workdir
 
 WORKDIR /home/${USER_NAME}/workdir
+
+# User configuration
+
+## Emacs
+
+### Fonts
+
+RUN apk add font-fira-code-nerd
