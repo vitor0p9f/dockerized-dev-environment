@@ -86,6 +86,28 @@
         (goto-char (point-max))
         (eval-print-last-sexp)))
     (load bootstrap-file nil 'nomessage))
+#+end_src
+
+* LSP
+
+** LSP bridge
+
+*** Dependencies
+
+#+begin_src emacs-lisp
+  (use-package yasnippet)
+#+end_src
+
+*** Installation
+
+#+begin_src emacs-lisp
+  (use-package lsp-bridge
+    :straight '(lsp-bridge :type git :host github :repo "manateelazycat/lsp-bridge"
+                           :files (:defaults "*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+                           :build (:not compile))
+    :init
+    (global-lsp-bridge-mode))
+#+end_src
 * UI
 
 ** Emacs configuration
