@@ -1,6 +1,7 @@
 # Files
 
 .env
+config/fish/fish_variables
 
 # Directories
 
