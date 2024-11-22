@@ -153,6 +153,23 @@
   (add-hook 'elixir-mode-hook #'lsp-bridge-mode)
 #+end_src
 
+*** Python
+
+#+begin_src emacs-lisp
+  (use-package lsp-pyright
+    :after lsp-bridge
+    :config
+    (setq lsp-pyright-auto-imports t))
+
+  (setq lsp-bridge-python-lsp-server "pyright")
+#+end_src
+
+*** HTML / CSS
+
+#+begin_src emacs-lisp
+  (add-hook 'html-mode-hook #'lsp-bridge-mode)
+#+end_src
+
 * UI
 
 ** Emacs configuration
