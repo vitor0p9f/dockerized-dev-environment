@@ -76,6 +76,27 @@
   (use-package elixir-mode)
 #+end_src
 
+*** Python
+
+#+begin_src emacs-lisp
+  (use-package python-mode)
+
+  (setq python-indent-offset 2)  ;; Set the number of spaces to identation
+#+end_src
+
+*** HTML
+
+#+begin_src emacs-lisp
+  (use-package web-mode
+    :ensure t
+    :mode ("\\.html\\'" "\\.htm\\'")
+    :config
+    (setq web-mode-enable-auto-pairing t)
+    (setq web-mode-enable-auto-closing t)
+    (setq web-mode-enable-auto-quoting t)
+    )
+#+end_src
+
 ** Straight
 
 #+begin_src emacs-lisp
