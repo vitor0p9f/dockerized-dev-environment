@@ -121,6 +121,7 @@
 
 #+begin_src emacs-lisp
   (setq lsp-bridge-enable-hover-diagnostic t) ;; Shows diagnostic tooltip when the cursor hover the error diagnostic
+  (setq lsp-bridge-enable-auto-format-code t)
 #+end_src
 
 ** LSP servers
