@@ -9,8 +9,8 @@
   (require 'package)
 
   (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			   ("org" . "https://orgmode.org/elpa/")
-			   ("elpa" . "https://elpa.gnu.org/packages/")))
+                           ("org" . "https://orgmode.org/elpa/")
+                           ("elpa" . "https://elpa.gnu.org/packages/")))
 
   (package-initialize)
   (unless package-archive-contents
@@ -39,10 +39,10 @@
 
   (defun efs/org-babel-tangle-config ()
     (when (string-equal (buffer-file-name)
-			(expand-file-name "~/.config/emacs/config.org"))
+                        (expand-file-name "~/.config/emacs/config.org"))
 
       (let ((org-confirm-babel-evaluate nil))
-	(org-babel-tangle))))
+        (org-babel-tangle))))
 
   (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'efs/org-babel-tangle-config)))
 #+end_src
@@ -51,9 +51,9 @@
 
 #+begin_src emacs-lisp
   (add-hook 'org-mode-hook (lambda ()
-			     (setq indent-tabs-mode nil)
-			     (setq tab-width 2)
-			     (org-indent-mode)))
+                             (setq indent-tabs-mode nil)
+                             (setq tab-width 2)
+                             (org-indent-mode)))
 #+end_src
 
 ** Bullets
@@ -93,8 +93,7 @@
     :config
     (setq web-mode-enable-auto-pairing t)
     (setq web-mode-enable-auto-closing t)
-    (setq web-mode-enable-auto-quoting t)
-    )
+    (setq web-mode-enable-auto-quoting t))
 #+end_src
 
 ** Straight
@@ -115,6 +114,65 @@
         (goto-char (point-max))
         (eval-print-last-sexp)))
     (load bootstrap-file nil 'nomessage))
+#+end_src
+
+** Ivy
+
+*** Counsel
+
+#+begin_src emacs-lisp
+  (use-package counsel)
+#+end_src
+
+*** Installation
+
+#+begin_src emacs-lisp
+  (use-package ivy)
+
+  (ivy-mode)
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
+  ;; enable this if you want `swiper' to use it
+  ;; (setq search-default-mode #'char-fold-to-regexp)
+  (global-set-key "\C-s" 'swiper)
+  (global-set-key (kbd "C-c C-r") 'ivy-resume)
+  (global-set-key (kbd "<f6>") 'ivy-resume)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+  (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+  (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+  (global-set-key (kbd "<f1> o") 'counsel-describe-symbol)
+  (global-set-key (kbd "<f1> l") 'counsel-find-library)
+  (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+  (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+  (global-set-key (kbd "C-c g") 'counsel-git)
+  (global-set-key (kbd "C-c j") 'counsel-git-grep)
+  (global-set-key (kbd "C-c k") 'counsel-ag)
+  (global-set-key (kbd "C-x l") 'counsel-locate)
+  (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+  (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+#+end_src
+
+*** All-the-icons-ivy-rich
+
+#+begin_src emacs-lisp
+  (use-package all-the-icons-ivy-rich
+    :init (all-the-icons-ivy-rich-mode 1))
+#+end_src
+
+*** Ivy-rich
+
+#+begin_src emacs-lisp
+  (use-package ivy-rich
+    :init (ivy-rich-mode 1))
+#+end_src
+
+** Magit
+
+#+begin_src emacs-lisp
+  (use-package magit)
 #+end_src
 
 * LSP
