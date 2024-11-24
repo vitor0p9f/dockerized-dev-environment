@@ -46,7 +46,7 @@
       ```
     </details>
 
-5. Run the `devE build` command. You'll need 
+5. Run the `devE build` command. You'll need to execute this command only to build your container. You must use `devE` to start the environment.
 
 ## Create development environments with nix-shell and Direnv
 
@@ -61,14 +61,19 @@
 
    ```nix
      { pkgs ? import <nixpkgs> {} }:
+
+     let
+       sharedNixShellConfig = import ~/.config/nix/default-shell.nix { inherit pkgs; };
+     in
      pkgs.mkShell {
-       buildInputs = [
+       buildInputs = sharedNixShellConfig.buildInputs ++ [
          # Declare here the packages to install
          pkgs.packageName
        ];
   
        # Declare here the commands that the shell must run on start-up
        shellHook = ''
+         ${sharedNixShellConfig.shellHook}
        '';
   
        # Declare here your environment variables. Declare the variables like the example below
@@ -78,4 +83,83 @@
 
  4. Run `direnv allow` inside the project directory to allow Direnv automatically start the environment.
 
- 5. The environment will be loaded every time you enter the project directory and unloaded when you exit it. 
+ 5. The environment will be loaded every time you enter the project directory and unloaded when you exit it.
+
+## LSP
+
+The Emacs uses the LSP Bridge package. The LSP is enabled only inside a development environment because nix-shell has the package dependencies. Use the packages from one of the configurations below in your shell.nix inside your project directory based on the programming language that you're using.
+
+### Elixir
+
+   ```nix
+     { pkgs ? import <nixpkgs> {} }:
+
+     let
+       sharedNixShellConfig = import ~/.config/nix/default-shell.nix { inherit pkgs; };
+     in
+     pkgs.mkShell {
+       buildInputs = sharedNixShellConfig.buildInputs ++ [
+         pkgs.elixir
+	       pkgs.elixir-ls
+         # Declare here the packages to install
+         pkgs.packageName
+       ];
+  
+       # Declare here the commands that the shell must run on start-up
+       shellHook = ''
+         ${sharedNixShellConfig.shellHook}
+       '';
+  
+       # Declare here your environment variables. Declare the variables like the example below
+       TESTE = "some_value";
+     }
+   ```
+### Python
+
+   ```nix
+     { pkgs ? import <nixpkgs> {} }:
+
+     let
+       sharedNixShellConfig = import ~/.config/nix/default-shell.nix { inherit pkgs; };
+     in
+     pkgs.mkShell {
+       buildInputs = sharedNixShellConfig.buildInputs ++ [
+         pkgs.pyright
+         # Declare here the packages to install
+         pkgs.packageName
+       ];
+  
+       # Declare here the commands that the shell must run on start-up
+       shellHook = ''
+         ${sharedNixShellConfig.shellHook}
+       '';
+  
+       # Declare here your environment variables. Declare the variables like the example below
+       TESTE = "some_value";
+     }
+   ```
+### HTML / CSS / Javascript / Typescript
+
+   ```nix
+     { pkgs ? import <nixpkgs> {} }:
+
+     let
+       sharedNixShellConfig = import ~/.config/nix/default-shell.nix { inherit pkgs; };
+     in
+     pkgs.mkShell {
+       buildInputs = sharedNixShellConfig.buildInputs ++ [
+         pkgs.nodePackages.typescript-language-server
+         pkgs.vscode-langservers-extracted
+         # Declare here the packages to install
+         pkgs.packageName
+       ];
+  
+       # Declare here the commands that the shell must run on start-up
+       shellHook = ''
+         ${sharedNixShellConfig.shellHook}
+       '';
+  
+       # Declare here your environment variables. Declare the variables like the example below
+       TESTE = "some_value";
+     }
+   ```
