@@ -1,0 +1,150 @@
+#+title: Emacs configuration for Note Taking profile
+#+author: Vítor Pereira Fontes
+#+date: 2024-12-16
+#+PROPERTY: header-args:emacs-lisp :tangle ./init.el :mkdirp yes
+
+* Repositories
+
+#+begin_src emacs-lisp
+  (require 'package)
+
+  (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                           ("org" . "https://orgmode.org/elpa/")
+                           ("elpa" . "https://elpa.gnu.org/packages/")))
+
+  (package-initialize)
+  (unless package-archive-contents
+    (package-refresh-contents))
+#+end_src
+
+* 'use-package' configuration
+
+#+begin_src emacs-lisp
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+
+  (require 'use-package)
+  (setq use-package-always-ensure t)
+#+end_src
+
+** Identation on org files
+
+#+begin_src emacs-lisp
+  (add-hook 'org-mode-hook (lambda ()
+                             (setq indent-tabs-mode nil)
+                             (setq tab-width 2)
+                             (org-indent-mode)))
+#+end_src
+
+* UI
+
+** Emacs configuration
+
+*** Line numbers
+
+#+begin_src emacs-lisp
+  (column-number-mode)
+  (global-display-line-numbers-mode t)
+#+end_src
+
+*** Rainbow delimiters
+
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+    :hook (prog-mode . rainbow-delimiters-mode))
+#+end_src
+
+*** Doom modeline
+
+**** Font and icons
+
+#+begin_src emacs-lisp
+  (use-package nerd-icons
+    :custom
+    (nerd-icons-font-family "Fira Code Nerd Font"))
+#+end_src
+
+**** Installation
+
+#+begin_src emacs-lisp
+  (use-package doom-modeline
+    :init (doom-modeline-mode 1))
+#+end_src
+
+*** Theme
+
+#+begin_src emacs-lisp
+  (use-package kanagawa-themes
+    :config
+    (load-theme 'kanagawa-dragon t))
+#+end_src
+
+*** Font size
+
+#+begin_src emacs-lisp
+  (set-face-attribute 'default nil :height 120)
+#+end_src
+
+*** General identation (2 spaces)
+
+#+begin_src emacs-lisp
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq-default standard-indent 2)
+#+end_src
+
+* Packages
+
+** Ivy
+
+*** Counsel
+
+#+begin_src emacs-lisp
+  (use-package counsel)
+#+end_src
+
+*** Installation
+
+#+begin_src emacs-lisp
+  (use-package ivy)
+
+  (ivy-mode)
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
+  ;; enable this if you want `swiper' to use it
+  ;; (setq search-default-mode #'char-fold-to-regexp)
+  (global-set-key "\C-s" 'swiper)
+  (global-set-key (kbd "C-c C-r") 'ivy-resume)
+  (global-set-key (kbd "<f6>") 'ivy-resume)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+  (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+  (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+  (global-set-key (kbd "<f1> o") 'counsel-describe-symbol)
+  (global-set-key (kbd "<f1> l") 'counsel-find-library)
+  (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+  (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+  (global-set-key (kbd "C-c g") 'counsel-git)
+  (global-set-key (kbd "C-c j") 'counsel-git-grep)
+  (global-set-key (kbd "C-c k") 'counsel-ag)
+  (global-set-key (kbd "C-x l") 'counsel-locate)
+  (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+  (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+#+end_src
+
+*** All-the-icons-ivy-rich
+
+#+begin_src emacs-lisp
+  (use-package all-the-icons-ivy-rich
+    :init (all-the-icons-ivy-rich-mode 1))
+#+end_src
+
+*** Ivy-rich
+
+#+begin_src emacs-lisp
+  (use-package ivy-rich
+    :init (ivy-rich-mode 1))
+#+end_src
